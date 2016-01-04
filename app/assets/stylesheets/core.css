@@ -271,7 +271,7 @@ html.home{
 }
 
 #refer .header .content{
-	width: 315px;
+	width: 195px;
 	margin: 0 auto;
 }
 
@@ -293,7 +293,7 @@ html.home{
 	line-height: 0;
 	margin-right: 14px;
 	letter-spacing: 1px;
-	background: url(/assets/refer/logo.png) 0 0 no-repeat;
+	background: url(/assets/refer/logo@2x.png) 0 0 no-repeat;
 	background-size: 106px 19px;
 	height: 19px;
 	width: 106px;
@@ -642,8 +642,11 @@ only screen and (min-device-pixel-ratio: 2) {
 	}
 
 	#refer .header .logo{
-		background: url(/assets/refer/logo@2x.png) 0 0 no-repeat;
-		background-size: 106px 19px;
+    background: url(/assets/refer/logo@2x.png) 0 0 no-repeat;
+    background-size: 195px auto;
+    width: 197px;
+    height: 34px;
+    margin-top: 14px;
 	}
 
 	#refer .mammoth{
