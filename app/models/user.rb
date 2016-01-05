@@ -13,27 +13,27 @@ class User < ActiveRecord::Base
     REFERRAL_STEPS = [
         {
             'count' => 5,
-            "html" => "Shave<br>Cream",
+            "html" => "1 Prayer Hammer eBook",
             "class" => "two",
-            "image" =>  ActionController::Base.helpers.asset_path("refer/cream-tooltip@2x.png")
+            "image" =>  ActionController::Base.helpers.asset_path("refer/5.png")
         },
         {
             'count' => 10,
-            "html" => "Truman Handle<br>w/ Blade",
+            "html" => "1 Prayer Hammer eBook<br/>+ 1 Prayer Eagle Badge (Red)",
             "class" => "three",
-            "image" => ActionController::Base.helpers.asset_path("refer/truman@2x.png")
+            "image" => ActionController::Base.helpers.asset_path("refer/10.png")
         },
         {
             'count' => 25,
-            "html" => "Winston<br>Shave Set",
+            "html" => "1 Prayer Hammer eBook<br/>+ 2 Prayer Eagle Badges<br/>(Red & White)",
             "class" => "four",
-            "image" => ActionController::Base.helpers.asset_path("refer/winston@2x.png")
+            "image" => ActionController::Base.helpers.asset_path("refer/25.png")
         },
         {
             'count' => 50,
-            "html" => "One Year<br>Free Blades",
+            "html" => "1 Prayer Hammer eBook<br/>+ 2 Prayer Eagle Badges<br/>(Red & White)<br/><b>+ 1 Year FREE Membership</b>",
             "class" => "five",
-            "image" => ActionController::Base.helpers.asset_path("refer/blade-explain@2x.png")
+            "image" => ActionController::Base.helpers.asset_path("refer/50.png")
         }
     ]
 
