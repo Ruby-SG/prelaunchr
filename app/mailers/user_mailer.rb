@@ -8,11 +8,11 @@ class UserMailer < ActionMailer::Base
         mail(:to => user.email, :subject => "Thanks for signing up!")
     end
 
-    def invite(subject, body, email, name, user)
+    def invite(subject, body, email, name, user, sender)
         @body = body
         @name = name
         @user = user
 
-        mail(:to => email, :subject => subject, from: "#{name} <#{email}>")
+        mail(:to => email, :subject => subject, from: "#{sender[:name]} <#{sender[:email]}>")
     end
 end

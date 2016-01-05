@@ -94,7 +94,7 @@ class UsersController < ApplicationController
             puts 'checking emails'
             invite[:to].each do |index, account|
                 p account
-                UserMailer.invite(subject, body, account[:email], account[:name], @user).deliver! unless account[:email].blank?
+                UserMailer.invite(subject, body, account[:email], account[:name], @user, sender).deliver! unless account[:email].blank?
             end
 
             redirect_to action: :refer and return
