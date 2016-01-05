@@ -82,7 +82,7 @@ class UsersController < ApplicationController
 
     def invite
         if params[:sender].present?
-            sendder = params[:sender]
+            sender = params[:sender]
             invite  = params[:invite]
 
             body = invite[:msg]
