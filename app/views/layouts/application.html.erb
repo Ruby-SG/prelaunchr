@@ -10,10 +10,11 @@
         <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
 
         <meta property="fb:app_id" content="352593494907606"/>
-        <meta property="og:app_id" content="352593494907606"/>
         <meta property="og:title" content="Spousewell is coming!"/>
-        <meta property="og:description" content="Shaving is evolving. Didn’t want to leave you all behind. Check out Spousewell here."/>
+        <meta property="og:description" content="Spousewell is coming! Wedding is within reach. Didn’t want to leave you all behind. Check out Spousewell here"/>
         <meta property="og:image" content="<%= root_url %><%= asset_path("refer/gift.png") %>"/>
+        <meta property="og:url" content="<%= root_url %>"/>
+
         <% if @is_mobile %>
             <% if @bodyId == 'home' %>
                 <meta name="viewport" content="width=1600" />
@@ -25,25 +26,6 @@
         <%= csrf_meta_tags %>
 </head>
 <body id="<%= @bodyId %>">
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '352593494907606',
-      xfbml      : true,
-      version    : 'v2.5'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
 <%= yield %>
-
-
 </body>
 </html>
