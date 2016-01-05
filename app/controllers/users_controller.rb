@@ -96,6 +96,8 @@ class UsersController < ApplicationController
                 p account
                 UserMailer.invite(subject, body, account[:email], account[:name], @user).deliver! unless account[:email].blank?
             end
+
+            redirect_to action: :refer and return
         end
 
         @bodyId = 'refer'
