@@ -693,12 +693,22 @@ only screen and (min-device-pixel-ratio: 2) {
 	}
 }
 
+.invite > table tr, .invite > table td{
+	padding: 5px;
+}
 
+.hero.invite{
+	height: auto !important;
+}
 
+.hero.invite textarea{
+	padding: 5px;
+}
 
-
-
-
+table.margin td{
+	padding: 5px 0;
+	width: 190px;
+}
 
 
 
