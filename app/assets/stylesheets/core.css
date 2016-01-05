@@ -693,8 +693,8 @@ only screen and (min-device-pixel-ratio: 2) {
 	}
 }
 
-.invite > table tr, .invite > table td{
-	padding: 5px;
+.invite table tr, .invite table td{
+	padding: 5px 5px 0px 5px;
 }
 
 .hero.invite{

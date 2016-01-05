@@ -5,25 +5,26 @@
 </div>
 
 <div class="hero invite">
+<form method='post'>
     <table border="0" cellpadding="0" cellspacing="0" align="center" width="400">
 
-    <tr><td align="right">Your Email:&nbsp;</td><td><input type="text" name="SenderEmail" size="14" style="width:100%;" value=""></td></tr>
-    <tr><td align="right">Your Name:&nbsp;</td><td><input type="text" name="SenderName" size="14" style="width:100%;" value=""></td></tr>
+    <tr><td align="right">Your Email:&nbsp;</td><td><input type="text" name="sender[email]" size="14" style="width:100%;" value="" required=true></td></tr>
+    <tr><td align="right">Your Name:&nbsp;</td><td><input type="text" name="sender[name]" size="14" style="width:100%;" value="" required=true></td></tr>
 
-    <tr><td align="right"><b>Subject:&nbsp;</b></td><td><input type="text" name="Subject" size="14" style="width:100%;" value="Spousewell is coming!"></td></tr>
+    <tr><td align="right"><b>Subject:&nbsp;</b></td><td><input type="text" name="invite[subject]" size="14" style="width:100%;" value="Spousewell is coming!" required=true></td></tr>
 
     <tr><td colspan="2">
-        <textarea name="Message" cols="22" rows="8" style="width:100%;">Say something about this...
+        <textarea name="invite[msg]" cols="22" rows="8" style="width:98%;">Say something about this...
 
-Wedding is within reach. Didn't want to leave you all behind. Check out Spousewell here
+Wedding is within reach. Didn't want to leave you all behind.
         </textarea></td></tr>
         <tr><td colspan="2"><b>Friends: </b></td></tr>
     <tr>
         <td colspan="2">
             <table border="0" cellpadding="0" cellspacing="0" width='400' class='margin'><!-- Form Table -->
                 <tbody><tr><td><b>Email:</b></td><td><b>Name:</b></td></tr>
-                <% 10.times do %>
-                    <tr><td><input type="text" name="RecipientEmail1" style="width:200px;" size="9" value=""></td><td><input type="text" name="RecipientName1" style="width:200px;" size="9" value=""></td></tr>
+                <% 10.times.each do |index|%>
+                    <tr><td><input type="text" name="invite[to][<%= index %>][email]" style="width:200px;" size="9" value=""></td><td><input type="text" name="invite[to][<%= index %>][name]" style="width:200px;" size="9" value=""></td></tr>
                 <% end %>
             </tbody></table>
         </td>
@@ -38,4 +39,5 @@ Wedding is within reach. Didn't want to leave you all behind. Check out Spousewe
         </tr>
 
 </tbody></table>
+</form>
 </div>

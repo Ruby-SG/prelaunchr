@@ -81,6 +81,23 @@ class UsersController < ApplicationController
     end
 
     def invite
+        if params[:sender].present?
+            sendder = params[:sender]
+            invite  = params[:invite]
+
+            body = invite[:msg]
+            subject = invite[:subject]
+
+            email = cookies[:h_email]
+            @user = User.find_by_email(email)
+
+            puts 'checking emails'
+            invite[:to].each do |index, account|
+                p account
+                UserMailer.invite(subject, body, account[:email], account[:name], @user).deliver! unless account[:email].blank?
+            end
+        end
+
         @bodyId = 'refer'
         respond_to do |format|
             format.html # new.html.erb
