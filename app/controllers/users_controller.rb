@@ -7,6 +7,11 @@ class UsersController < ApplicationController
 
         @user = User.new
 
+        if params[:invite_id].present?
+            invite = Invitation.find_by_id(params[:invite_id])
+            invite.update_attributes clicked: true if invite
+        end
+
         respond_to do |format|
             format.html # new.html.erb
         end
@@ -93,8 +98,15 @@ class UsersController < ApplicationController
 
             puts 'checking emails'
             invite[:to].each do |index, account|
-                p account
-                UserMailer.invite(subject, body, account[:email], account[:name], @user, sender).deliver! unless account[:email].blank?
+                email = account[:email]
+                name  = account[:name]
+
+
+                unless email.blank?
+                    invitation = Invitation.create(email: sender[:email], name: sender[:name], to_email: email, to_name: name)
+                    p invitation.errors
+                    UserMailer.invite(subject, body, email, name, @user, sender, invitation.id).deliver!
+                end
             end
 
             redirect_to action: :refer and return

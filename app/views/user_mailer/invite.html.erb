@@ -12,6 +12,6 @@
     <%= raw @body.gsub("\r\n", '<br/>') %>
 
     <br/>
-    <a href="<%= Rails.application.config.action_mailer.default_url_options || "" %>?ref=<%= @user.referral_code %>" style="font-family: 'Times', serif; font-size: 14px; letter-spacing: 0.05em; color: #6c6c6c; text-decoration: none" target="_blank">Check out Spousewell here</a>
+    <a href="<%= Rails.application.config.action_mailer.default_url_options || "" %>?ref=<%= @user.referral_code %>&invite_id=<%= @invite_id || ''%>" style="font-family: 'Times', serif; font-size: 14px; letter-spacing: 0.05em; color: #6c6c6c; text-decoration: none" target="_blank">Check out Spousewell here</a>
 </body>
 </html>
