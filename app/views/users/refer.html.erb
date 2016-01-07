@@ -17,9 +17,9 @@
             <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
             <% twitter_message = "#Shaving is evolving. Excited for @spousewell to launch." %>
             <div class="social-links">
-                <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Spousewell" class="fb" target="_blank"></a>
-                <div class="sep"></div>
                 <a href="<%= invite_friends_path %>" class="email"></a>
+                <div class="sep"></div>
+                <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Spousewell" class="fb" target="_blank"></a>
             </div>
         </div>
     </div>
@@ -82,7 +82,7 @@
         <% end %>
         <p class="check brandon">Keep checking</p>
 
-        <p class="ship brandon">We ship to the U.S. (& Canada Soon)</p>
+        <p class="ship brandon">We Ship Worldwide</p>
         <a class="policy brandon" href="/privacy-policy" target="_blank">Privacy Policy</a>
     </div>
 </div>
