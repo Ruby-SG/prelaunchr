@@ -115,7 +115,7 @@ class UsersController < ApplicationController
 
       params = {
         meta_web_form_id:'256425572',
-        listname:'optionsbox-2015',
+        listname:'optionsbox',
         redirect:'http://www.optionincomevideos.com/video',
         meta_adtracking:'OptionsBox-2015',
         meta_message:'1',
@@ -125,7 +125,15 @@ class UsersController < ApplicationController
 
       x = Net::HTTP.post_form(URI.parse('https://www.aweber.com/scripts/addlead.pl'), params)
       puts 'Getting here ###############'
-      puts x.body
+      str = x.body
+      p str
+
+      url = str[/https:\/\/www.aweber.com\/form-captcha.+>here/]
+      if url
+        url = url.gsub('">here', '')
+        redirect_to url
+        return
+      end
     end
 
 end
