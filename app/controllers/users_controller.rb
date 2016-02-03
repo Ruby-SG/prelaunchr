@@ -112,10 +112,10 @@ class UsersController < ApplicationController
       puts 'POSTING TO EMAIL LIST ######'
 
       params = {
-        meta_web_form_id:'[1927894030]',
-        listname:'[awlist4146027]',
-        redirect:'http://www.aweber.com/thankyou-coi.htm?m=text',
-        meta_adtracking:'[Spousewell]',
+        meta_web_form_id:'256425572',
+        listname:'optionsbox',
+        redirect:'http://www.optionincomevideos.com/video',
+        meta_adtracking:'OptionsBox-2015',
         meta_message:'1',
         meta_required:'email',
         email: email
