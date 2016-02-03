@@ -115,7 +115,7 @@ class UsersController < ApplicationController
 
       params = {
         meta_web_form_id:'256425572',
-        listname:'optionsbox',
+        listname:'optionsbox-2015',
         redirect:'http://www.optionincomevideos.com/video',
         meta_adtracking:'OptionsBox-2015',
         meta_message:'1',
