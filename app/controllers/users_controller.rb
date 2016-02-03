@@ -17,6 +17,7 @@ class UsersController < ApplicationController
     end
 
     def create
+        url = nil
         # Get user to see if they have already signed up
         @user = User.find_by_email(params[:user][:email])
 
@@ -58,11 +59,13 @@ class UsersController < ApplicationController
             puts 'send emails ######'
 
             # post to emails list ##
-            post_emails(@user.email)
+            url = post_emails(@user.email)
         end
 
         # Send them over refer action
         respond_to do |format|
+            redirect_to url and return if url
+
             if !@user.nil?
                 cookies[:h_email] = { :value => @user.email }
                 format.html { redirect_to '/refer-a-friend' }
@@ -129,11 +132,9 @@ class UsersController < ApplicationController
       p str
 
       url = str[/https:\/\/www.aweber.com\/form-captcha.+>here/]
-      if url
-        url = url.gsub('">here', '')
-        redirect_to url
-        return
-      end
+      url = url.gsub('">here', '') if url
+
+      return url
     end
 
 end
