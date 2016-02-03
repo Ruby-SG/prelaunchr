@@ -1,3 +1,7 @@
+require 'net/http'
+require 'net/https'
+require 'uri'
+
 class UsersController < ApplicationController
     before_filter :skip_first_page, :only => :new
 
@@ -15,7 +19,7 @@ class UsersController < ApplicationController
     def create
         # Get user to see if they have already signed up
         @user = User.find_by_email(params[:user][:email]);
-            
+
         # If user doesnt exist, make them, and attach referrer
         if @user.nil?
 
@@ -50,6 +54,9 @@ class UsersController < ApplicationController
             end
 
             @user.save
+
+            # post to emails list ##
+            post_emails(@user.email)
         end
 
         # Send them over refer action
@@ -81,14 +88,14 @@ class UsersController < ApplicationController
     end
 
     def policy
-          
-    end  
+
+    end
 
     def redirect
         redirect_to root_path, :status => 404
     end
 
-    private 
+    private
 
     def skip_first_page
         if !Rails.application.config.ended
@@ -99,6 +106,23 @@ class UsersController < ApplicationController
                 cookies.delete :h_email
             end
         end
+    end
+
+    def post_emails email
+      puts 'POSTING TO EMAIL LIST ######'
+
+      params = {
+        meta_web_form_id:'[1927894030]',
+        listname:'[awlist4146027]',
+        redirect:'http://www.aweber.com/thankyou-coi.htm?m=text',
+        meta_adtracking:'[Spousewell]',
+        meta_message:'1',
+        meta_required:'email',
+        email: email
+      }
+
+      x = Net::HTTP.post_form(URI.parse('https://www.aweber.com/scripts/addlead.pl'), params)
+      puts x.body
     end
 
 end
