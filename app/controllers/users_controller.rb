@@ -134,7 +134,7 @@ class UsersController < ApplicationController
       p str
 
       url = str[/https:\/\/www.aweber.com\/form-captcha.+>here/]
-      url = url.gsub('">here', '') if url
+      url = url.gsub('">here', '').gsub('&amp;', '&') if url
 
       return url
     end
