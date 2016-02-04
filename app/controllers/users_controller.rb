@@ -64,10 +64,10 @@ class UsersController < ApplicationController
 
         # Send them over refer action
         respond_to do |format|
-            redirect_to url and return if url
 
             if !@user.nil?
                 cookies[:h_email] = { :value => @user.email }
+                redirect_to url and return if url
                 format.html { redirect_to '/refer-a-friend' }
             else
                 format.html { redirect_to root_path, :alert => "Something went wrong!" }
