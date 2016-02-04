@@ -119,10 +119,12 @@ class UsersController < ApplicationController
       params = {
         meta_web_form_id:'256425572',
         listname:'optionsbox',
-        redirect:'http://www.optionincomevideos.com/video',
+        redirect: 'http://rubysg-demo.herokuapp.com/refer-a-friend',
+        meta_redirect_onlist: 'http://rubysg-demo.herokuapp.com/refer-a-friend',
         meta_adtracking:'OptionsBox-2015',
         meta_message:'1',
         meta_required:'email',
+        meta_tooltip:'email||Enter Email Here...',
         email: email
       }
 
