@@ -70,7 +70,7 @@
             <div style="display:none">
                 <div id="form-signup">
                     <%= form_for @user, :url => { :action => "create" }, html: {class: 'clearfix popup-form'} do |f| %>
-                        <p class="button-facebook"><a href="#" class="clearfix"><span class="icon"></span><span class="text">SIGN UP WITH FACEBOOK</span></a></p>
+                        <p class="button-facebook"><a href="/auth/facebook" class="clearfix"><span class="icon"></span><span class="text">SIGN UP WITH FACEBOOK</span></a></p>
                         <p class="divider-or"><span>OR</span></p>
 
                         <div class='input-form'><input type="email" placeholder="Enter your email" name="user[email]" class="subscribe_textfield" /></div>

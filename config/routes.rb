@@ -15,6 +15,10 @@ Prelaunchr::Application.routes.draw do
   unless Rails.application.config.consider_all_requests_local
       match '*not_found', to: 'users#redirect', :format => false
   end
+
+  get 'auth/:provider/callback', to: 'users#create'
+  get 'auth/failure', to: redirect('/')
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -31,6 +31,7 @@ gem 'delayed_job_active_record'
 gem 'unicorn'
 
 gem "letter_opener", :group => :development
+gem 'omniauth-facebook', '~> 1.4.1'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

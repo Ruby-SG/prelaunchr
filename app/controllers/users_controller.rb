@@ -19,9 +19,15 @@ class UsersController < ApplicationController
     end
 
     def create
+        puts 'create ##############'
+        auth = env["omniauth.auth"]
+
+        email = params[:user][:email] rescue nil
+        email = "#{auth.uid}@facebook.com" if auth
+
         url = nil
         # Get user to see if they have already signed up
-        @user = User.find_by_email(params[:user][:email])
+        @user = User.find_by_email(email)
 
         # If user doesnt exist, make them, and attach referrer
         if @user.nil?
@@ -42,13 +48,13 @@ class UsersController < ApplicationController
             #     cur_ip.save
             # end
 
-            @user = User.new(:email => params[:user][:email])
+            @user = User.new(:email => email)
 
             @referred_by = User.find_by_referral_code(cookies[:h_ref])
 
             puts '------------'
             puts @referred_by.email if @referred_by
-            puts params[:user][:email].inspect
+            puts email.inspect
             puts request.env['HTTP_X_FORWARDED_FOR'].inspect
             puts '------------'
 
