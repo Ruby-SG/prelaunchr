@@ -57,11 +57,6 @@ class UsersController < ApplicationController
             end
 
             @user.save
-
-            puts 'send emails ######'
-
-            # post to emails list ##
-            url = post_emails(@user.email)
         end
 
         # Send them over refer action
