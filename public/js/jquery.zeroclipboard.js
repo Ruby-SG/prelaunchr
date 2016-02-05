@@ -1,5 +1,5 @@
 var client = new ZeroClipboard( $("#click-to-copy"), {
-              moviePath: "ZeroClipboard.swf",
+              moviePath: "/ZeroClipboard.swf",
               debug: false
 } );
 client.on( "ready", function( readyEvent ) {

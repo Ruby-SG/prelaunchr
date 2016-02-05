@@ -31,8 +31,7 @@
     <![endif]-->
     <!--[if (gte IE 9) | (!IE)]><!-->
     <script type="text/javascript" src="http://d2owzzusdvisuq.cloudfront.net/js/common/jquery-2.1.0.min.js"></script>
-    <script type="text/javascript" src="js/ZeroClipboard.js"></script>
-    <script type="text/javascript" src="js/jquery.zeroclipboard.js"></script>
+
     <!--<![endif]-->
     <title>Savil.me - Personal Stylist Menswear Online Fashion Shopping Website</title>
 </head>
@@ -69,7 +68,7 @@
                 <div>
                     <input type="text" value="<%= root_url %>?ref=<%= @user.referral_code %>" class="copy_textfield" />
                 </div>
-                <button type="submit" id='click-to-copy' data-clipboard-text="Copy Me!">COPY</button>
+                <button type="submit" id='click-to-copy' data-clipboard-text="<%= root_url %>?ref=<%= @user.referral_code %>">COPY</button>
                 <br class="clearit" />
                 <% twitter_message = "Savil.me is evolving." %>
                 <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>&ref=<%= CGI::escape(@user.referral_code) %>&title=Savil" class="facebook-icon" target="_blank"><img src="images/facebook-button.png"></a>
@@ -144,6 +143,8 @@
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/ZeroClipboard.js"></script>
+    <script type="text/javascript" src="js/jquery.zeroclipboard.js"></script>
 </body>
 
 </html>
