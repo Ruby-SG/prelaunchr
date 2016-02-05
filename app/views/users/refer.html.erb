@@ -31,6 +31,8 @@
     <![endif]-->
     <!--[if (gte IE 9) | (!IE)]><!-->
     <script type="text/javascript" src="http://d2owzzusdvisuq.cloudfront.net/js/common/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="js/ZeroClipboard.js"></script>
+    <script type="text/javascript" src="js/jquery.zeroclipboard.js"></script>
     <!--<![endif]-->
     <title>Savil.me - Personal Stylist Menswear Online Fashion Shopping Website</title>
 </head>
@@ -65,18 +67,50 @@
             <form class="referral-copy">
                 <br class="clearit" />
                 <div>
-                    <input type="text" placeholder="http://savil.me.com/?ref=da741cc5f4825" class="copy_textfield" />
+                    <input type="text" value="<%= root_url %>?ref=<%= @user.referral_code %>" class="copy_textfield" />
                 </div>
-                <button type="submit">COPY</button>
+                <button type="submit" id='click-to-copy' data-clipboard-text="Copy Me!">COPY</button>
                 <br class="clearit" />
-                <a class="facebook-icon" href="#"><img src="images/facebook-button.png"></a>
-                <a class="twitter-icon" href="#"><img src="images/twitter-button.png"></a>
+                <% twitter_message = "Savil.me is evolving." %>
+                <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>&ref=<%= CGI::escape(@user.referral_code) %>&title=Savil" class="facebook-icon" target="_blank"><img src="images/facebook-button.png"></a>
+                <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twitter-icon" target="_blank"><img src="images/twitter-button.png"></a>
             </form>
         </div>
     </div>
+    <%
+      referrals_count = @user.referrals.count
+
+      stops = User::REFERRAL_STEPS
+
+      found = nil
+
+      stops.reverse_each { |stop|
+          if stop["count"] <= referrals_count and !found
+              stop["selected"] = true
+              found = stop
+          else
+              stop["selected"] = false
+          end
+      }
+     %>
+
+    <%
+      words = ''
+      if referrals_count == 1
+        words = 'friend has'
+      elsif
+        words = 'friends have'
+      end
+    %>
+
     <div class="friends-joint clearfix">
-        <p>No friends have joined - yet!</p>
-        <p>Keep spreading the word and check back again soon.</p>
+        <% if referrals_count == 0 %>
+          <p>No friends have joined - yet!</p>
+          <p>Keep spreading the word and check back again soon.</p>
+        <% else %>
+          <p class="place brandon"><span><%= referrals_count %></span> <%= words %> joined</p>
+        <% end %>
+
         <ul class="progress-friends">
             <li>
                 <p>friends joined</p>
