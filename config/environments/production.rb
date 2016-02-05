@@ -2,11 +2,11 @@ Prelaunchr::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
-  config.cache_classes = true
+  config.cache_classes =
 
   # Full error reports are disabled and caching is turned on
-  config.consider_all_requests_local       = false
-  config.action_controller.perform_caching = true
+  config.consider_all_requests_local       = true
+  config.action_controller.perform_caching = false
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
   config.serve_static_assets = false
@@ -63,11 +63,17 @@ Prelaunchr::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = { :host => 'www.example.com' }
-
-  config.log_lelel = :debug
+  config.action_mailer.default_url_options = { :host => 'savil.herokuapp.com' }
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:   'smtp.mandrillapp.com',
+    port:      587,
+    user_name: 'dev@ideabox.com.au',
+    password:  'HY0FhQQQtPfZxZt8ile5PA'
+  }
 end
