@@ -80,13 +80,13 @@ class UsersController < ApplicationController
 
         @user = User.find_by_email(email)
 
-        # respond_to do |format|
-        #     if !@user.nil?
-        #         format.html #refer.html.erb
-        #     else
-        #         format.html { redirect_to root_path, :alert => "Something went wrong!" }
-        #     end
-        # end
+        respond_to do |format|
+            if !@user.nil?
+                format.html #refer.html.erb
+            else
+                format.html { redirect_to root_path, :alert => "Something went wrong!" }
+            end
+        end
     end
 
     def policy

@@ -69,20 +69,22 @@
             <a href="http://www.youtube.com/embed/4klLf_V97pA?autoplay=1" class="watch-demo video-popup fancybox.iframe"><span>Watch the demo</span></a>
             <div style="display:none">
                 <div id="form-signup">
-                    <form class="clearfix popup-form">
+                    <%= form_for @user, :url => { :action => "create" }, html: {class: 'clearfix popup-form'} do |f| %>
                         <p class="button-facebook"><a href="#" class="clearfix"><span class="icon"></span><span class="text">SIGN UP WITH FACEBOOK</span></a></p>
                         <p class="divider-or"><span>OR</span></p>
-                        <div><input type="email" placeholder="Enter your email" name="email" class="subscribe_textfield" /></div>
+
+                        <div class='input-form'><input type="email" placeholder="Enter your email" name="user[email]" class="subscribe_textfield" /></div>
+
                         <button type="submit">SUBMIT</button>
                         <br class="clearit" />
                         <p class="signup-signin">ALREADY SIGNED UP? <a href="#form-login" class="form-popup">SIGN IN HERE</a></p>
-                    </form>
+                    <% end %>
                 </div>
                 <div id="form-login">
                     <form class="clearfix popup-form">
                         <p class="button-facebook"><a href="#" class="clearfix"><span class="icon"></span><span class="text">LOG IN WITH FACEBOOK</span></a></p>
                         <p class="divider-or"><span>OR</span></p>
-                        <div><input type="email" placeholder="Enter your email" name="email" class="subscribe_textfield" /></div>
+                        <div class='input-form'><input type="email" placeholder="Enter your email" name="email" class="subscribe_textfield" /></div>
                         <button type="submit">LOG IN</button>
                         <br class="clearit" />
                         <p class="signup-signin">NOT REGISTERED YET? <a href="#form-signup" class="form-popup">SIGN UP HERE</a></p>
