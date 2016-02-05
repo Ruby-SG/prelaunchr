@@ -481,6 +481,9 @@ a.watch-demo {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
 }
+
+
+
 @media screen and (max-width: 900px) {
     .wrap {
         padding: 0 2.5%;

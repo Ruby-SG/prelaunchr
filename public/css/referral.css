@@ -33,6 +33,11 @@
     float: left;
 }
 
+.friend-total.selected {
+    background: #B69F6E !important;
+    color: white;
+}
+
 .text-right {
     float: right;
     width: 35%;

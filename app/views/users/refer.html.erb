@@ -77,22 +77,7 @@
             </form>
         </div>
     </div>
-    <%
-      referrals_count = @user.referrals.count
-
-      stops = User::REFERRAL_STEPS
-
-      found = nil
-
-      stops.reverse_each { |stop|
-          if stop["count"] <= referrals_count and !found
-              stop["selected"] = true
-              found = stop
-          else
-              stop["selected"] = false
-          end
-      }
-     %>
+    <% referrals_count = 27 #@user.referrals.count %>
 
     <%
       words = ''
@@ -116,20 +101,20 @@
                 <p>friends joined</p>
             </li>
             <li>
-                <p class="friend-total">5</p>
+                <p class="friend-total <%= selected_class(5, 10, referrals_count) %>">5</p>
             </li>
             <li>
-                <p class="friend-total">10</p>
+                <p class="friend-total <%= selected_class(10, 25, referrals_count) %>">10</p>
             </li>
             <li>
-                <p class="friend-total">25</p>
+                <p class="friend-total <%= selected_class(25, 50, referrals_count) %>">25</p>
             </li>
             <li>
-                <p class="friend-total">50</p>
+                <p class="friend-total <%= selected_class(50, 1000, referrals_count) %>">50</p>
             </li>
         </ul>
         <div class="progress">
-            <div class="progress-bar"></div>
+            <div class="progress-bar" style='width: <%= width_class(referrals_count) %>'></div>
         </div>
         <ul class="progress-friends-award">
             <li>
