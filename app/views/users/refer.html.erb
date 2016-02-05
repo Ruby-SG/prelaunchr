@@ -1,88 +1,130 @@
-<div class="header">
-    <div class="content">
-        <p class="logo brandon">Harry&#8217;s</p>
-        <p class="byline brandon">THANK YOU FOR SIGNING UP</p>
-    </div>
-</div>
+<!DOCTYPE HTML>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <link rel="shortcut icon" href="http://d2owzzusdvisuq.cloudfront.net/img/favicon.ico">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Savile Row Society, Personal stylist, personal shopping, Menswear online shopping, Men&amp;#039;s fashion clothing Online, Buy Mens Clothing Online, personal online shopping, online fashion website, Online shopping website, online fashion shopping" />
+    <meta name="description" content="Savile Row Society is a mens personal shopping platform that connects professional men with personal stylists. Buy Mens designer fashion clothing Online at USA favourite online fashion shopping website - savilerowsociety.com" />
+    <link rel="shortcut icon" type="text/css" href="http://www.savilerowsociety.com/" />
+    <link rel="apple-touch-icon" type="text/css" href="http://www.savilerowsociety.com/css/img/css/apple-touch-icon.png.css" />
+    <link rel="apple-touch-icon" type="text/css" href="http://www.savilerowsociety.com/css/img/css/apple-touch-icon-72x72.png.css" sizes="72x72" />
+    <link rel="apple-touch-icon" type="text/css" href="http://www.savilerowsociety.com/css/img/css/apple-touch-icon-114x114.png.css" sizes="114x114" />
+    <script src="https://use.typekit.net/mpj5nps.js"></script>
+    <script>
+    try {
+        Typekit.load({
+            async: true
+        });
+    } catch (e) {}
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/style-alt.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/referral.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://d2owzzusdvisuq.cloudfront.net/js/common/jquery-1.11.0.min.js"></script>
+    <![endif]-->
+    <!--[if (gte IE 9) | (!IE)]><!-->
+    <script type="text/javascript" src="http://d2owzzusdvisuq.cloudfront.net/js/common/jquery-2.1.0.min.js"></script>
+    <!--<![endif]-->
+    <title>Savil.me - Personal Stylist Menswear Online Fashion Shopping Website</title>
+</head>
 
-<div class="hero">
-    <div class="page-content clearfix">
-        <div class="mammoth">
-            <span class="need brandon">Shaving Is<br>Evolving</span>
-        </div>
-        <div class="share-wrap">
-            <p class="why brandon">Don't leave your friends behind</p>
-            <p class="title brandon">INVITE FRIENDS &<br>Earn Product</p>
-            <p class="subtitle brandon">Share your unique link via email, Facebook<br>or Twitter and earn Harry's goods for<br>each friend who signs up.</p>
-            <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
-            <% twitter_message = "#Shaving is evolving. Excited for @harrys to launch." %>
-            <div class="social-links">
-                <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" class="fb" target="_blank"></a>
-                <div class="sep"></div>
-                <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"></a>
+<body>
+    <div class="background clearfix">
+        <div class="signing-up">
+            <div class="signing-up-text">
+                <p>thanks for signing up! we'll be in touch!</p>
             </div>
         </div>
+        <div class="wrap">
+            <div class="header clearfix">
+                <h1 class="logo"><img src="images/Savil.me-logo.png" alt="Savil.me" /></h1>
+                <ul>
+                    <li><a href="#" class="icon-twitter">Twitter</a></li>
+                    <li><a href="#" class="icon-facebook">Facebook</a></li>
+                    <li><a href="#" class="icon-rss">RSS Feed</a></li>
+                    <li><a href="#" class="icon-instagram">Instagram</a></li>
+                </ul>
+            </div>
+            <!--/.header-->
+        </div>
+        <!--/.wrap-->
+        <div class="image-left">
+            <img src="images/referral-image.png">
+        </div>
+        <div class="text-right">
+            <h4>HELP US WITH BETA TESTING</h4>
+            <h2>INVITE FRIENDS &amp; EARN REWARDS</h2>
+            <p>Share your unique link via email, Facebook or Twitter and earn great rewards from SAVIL.ME for each friend who signs up.</p>
+            <form class="referral-copy">
+                <br class="clearit" />
+                <div>
+                    <input type="text" placeholder="http://savil.me.com/?ref=da741cc5f4825" class="copy_textfield" />
+                </div>
+                <button type="submit">COPY</button>
+                <br class="clearit" />
+                <a class="facebook-icon" href="#"><img src="images/facebook-button.png"></a>
+                <a class="twitter-icon" href="#"><img src="images/twitter-button.png"></a>
+            </form>
+        </div>
     </div>
-</div>
-
-<% 
-    referrals_count = @user.referrals.count
-
-    stops = User::REFERRAL_STEPS
-
-    found = nil
-
-    stops.reverse_each { |stop|
-        if stop["count"] <= referrals_count and !found
-            stop["selected"] = true
-            found = stop
-        else
-            stop["selected"] = false
-        end
-    }   
- %>
-<div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
-    <div class="page-content">
-        <p class="callout brandon">Here's How It Works:</p>
-        <ul class="products clearfix">
-            <li class="title brandon"><p class="friends">Friends Joined</p><p class="rewards">Harry's Product</p></li>
-            <% stops.each do |stop| %>
-                <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
-                    <div class="circle"><%= stop["count"] %></div>
-                    <div class="sep"></div>
-                    <p><%= stop["html"].html_safe %></p>
-
-                    <div class="tooltip">
-                        <img src="<%= stop["image"] %>" height="254">
-                    </div>
-                </li>
-            <% end %>
+    <div class="friends-joint clearfix">
+        <p>No friends have joined - yet!</p>
+        <p>Keep spreading the word and check back again soon.</p>
+        <ul class="progress-friends">
+            <li>
+                <p>friends joined</p>
+            </li>
+            <li>
+                <p class="friend-total">5</p>
+            </li>
+            <li>
+                <p class="friend-total">10</p>
+            </li>
+            <li>
+                <p class="friend-total">25</p>
+            </li>
+            <li>
+                <p class="friend-total">50</p>
+            </li>
         </ul>
-
         <div class="progress">
-            <div class="mover">
-                <div class="bar clearfix"></div>
-            </div>
+            <div class="progress-bar"></div>
         </div>
-
-        <% 
-            words = ''
-            if referrals_count == 1
-                words = 'friend has'
-            elsif 
-                words = 'friends have'
-            end
-
-        %>
-
-        <% if referrals_count == 0 %>
-            <p class="place brandon"><span>No</span> friends have joined...Yet!</p>
-        <% else %>
-            <p class="place brandon"><span><%= referrals_count %></span> <%= words %> joined</p>
-        <% end %>
-        <p class="check brandon">Keep checking</p>
-
-        <p class="ship brandon">We ship to the U.S. (& Canada Soon)</p>        
-        <a class="policy brandon" href="/privacy-policy" target="_blank">Privacy Policy</a>
+        <ul class="progress-friends-award">
+            <li>
+                <p>REWARDS EARNED</p>
+            </li>
+            <li>
+                <p class="friend-text">One-year subscription to GQ® magazine</p>
+            </li>
+            <li>
+                <p class="friend-text">One-year subscription to Dollar Shave Club®</p>
+            </li>
+            <li>
+                <p class="friend-text">$100 credit for use at Savile.Me</p>
+            </li>
+            <li>
+                <p class="friend-text">One premium fitted suit</p>
+            </li>
+        </ul>
     </div>
-</div>
+    <div class="footer">
+        <div class="term-condition">
+            <p><a href="#">Terms &amp; Conditions</a> &nbsp|&nbsp <a href="#">Privacy Policy</a></p>
+            <p>*GQ &amp; Dollar Shave Club are in no way affiliated with this contest</p>
+            <p>GQ&reg; is a registered trademark of Conde Nast Inc.</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
