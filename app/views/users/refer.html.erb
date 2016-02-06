@@ -66,9 +66,9 @@
             <form class="referral-copy">
                 <br class="clearit" />
                 <div>
-                    <input type="text" value="<%= root_url %>?ref=<%= @user.referral_code %>" class="copy_textfield" />
+                    <input type="text" value="<%= root_url %>?ref=<%= @user.referral_code %>" class="copy_textfield" id='copy-url'/>
                 </div>
-                <button type="submit" id='click-to-copy' data-clipboard-text="<%= root_url %>?ref=<%= @user.referral_code %>">COPY</button>
+                <button type="submit" id='click-to-copy' data-clipboard-target="#copy-url">COPY</button>
                 <br class="clearit" />
                 <% twitter_message = "Savil.me is evolving." %>
                 <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>&ref=<%= CGI::escape(@user.referral_code) %>&title=Savil" class="facebook-icon" target="_blank"><img src="images/facebook-button.png"></a>
@@ -143,6 +143,7 @@
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.5/dist/clipboard.min.js"></script>
     <script type="text/javascript" src="js/ZeroClipboard.js"></script>
     <script type="text/javascript" src="js/jquery.zeroclipboard.js"></script>
 </body>
