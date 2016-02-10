@@ -63,17 +63,17 @@
             <h4>HELP US WITH BETA TESTING</h4>
             <h2>INVITE FRIENDS &amp; EARN REWARDS</h2>
             <p>Share your unique link via email, Facebook or Twitter and earn great rewards from SAVIL.ME for each friend who signs up.</p>
-            <div class="referral-copy">
+            <form class="referral-copy">
                 <br class="clearit" />
                 <div>
                     <input type="text" value="<%= root_url %>?ref=<%= @user.referral_code %>" class="copy_textfield" id='copy-url'/>
                 </div>
-                <button type="submit" id='click-to-copy' data-clipboard-target="#copy-url">COPY</button>
+                <button type="button" id='click-to-copy' data-clipboard-target="#copy-url">COPY</button>
                 <br class="clearit" />
                 <% twitter_message = "Savil.me is evolving." %>
                 <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>&ref=<%= CGI::escape(@user.referral_code) %>&title=Savil" class="facebook-icon" target="_blank"><img src="images/facebook-button.png"></a>
                 <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twitter-icon" target="_blank"><img src="images/twitter-button.png"></a>
-            </div>
+            </form>
         </div>
     </div>
     <% referrals_count = @user.referrals.count %>
