@@ -95,7 +95,9 @@ class UsersController < ApplicationController
     end
 
     def policy
+    end
 
+    def term
     end
 
     def redirect
