@@ -1,0 +1,366 @@
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.signing-up {
+    background: #363636; padding: 10px 0;
+	font-size: 12px;
+	color: #FFFFFF;
+	letter-spacing: 1px;
+	line-height: 15px;
+}
+
+.signing-up-text {
+    text-align: center;
+}
+
+.signing-up-text p {
+    margin: 0;
+    padding: 5px 0;
+    text-transform: uppercase;
+}
+
+.background {
+    background: #222222;
+}
+
+.image-left {
+    width: 45%;
+    margin-left: 5%;
+    margin-right: 5%;
+    float: left;
+}
+
+.text-right {
+    float: right;
+    width: 35%;
+    margin-right: 10%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.text-right p {
+    text-align: center;
+    padding: 0 14%;
+	font-size: 14px;
+	color: #B69F6E;
+	letter-spacing: 1px;
+	line-height: 23px;
+}
+
+.text-right h4 {
+	font-weight: 600;
+	font-size: 17px;
+	color: #B69F6E;
+	letter-spacing: 3px;
+	line-height: 20px;
+}
+
+.text-right h2 {
+	font-weight: 700;
+	font-size: 40px;
+	color: #FFFFFF;
+	letter-spacing: 5px;
+	line-height: 46px;
+}
+
+form.referral-copy div {
+    float: left;
+    border: 1px solid #b7bbc0;
+    border-right: 0;
+    width: 65%;
+    height: 50px;
+    border-radius: 0;
+    margin-left: 10%;
+}
+
+form.referral-copy div input {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+	font-size: 12px;
+    color: #000000;
+    letter-spacing: 1px;
+    line-height: 50px;
+    text-align: center;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+form.referral-copy button {
+    float: left;
+    background: #b69f6e;
+    border: 1px solid #b69f6e;
+    width: 15%;
+    height: 52px;
+    margin: 0;
+    padding: 0;
+	font-size: 10px;
+	letter-spacing: 0.5px;
+    color: #fff;
+    line-height: 50px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.facebook-icon img,
+.twitter-icon img {
+    width: 35px;
+    padding-top: 40px;
+}
+
+.facebook-icon img:hover,
+.twitter-icon img:hover,
+.twitter-icon img:focus,
+.facebook-icon img:focus {
+    opacity: .75;
+}
+
+form.referral-copy div input::-webkit-input-placeholder {
+    color: #000000;
+}
+
+form.referral-copy div input:-moz-placeholder {
+    color: #000000;
+}
+
+form.referral-copy div input::-moz-placeholder {
+    color: #000000;
+}
+
+form.referral-copy div input:-ms-input-placeholder {
+    color: #000000;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.friends-joint {
+    text-align: center;
+    color: #000000;
+    padding: 7.5% 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.friends-joint ul {
+	list-style: none;
+	margin: 0; padding: 0;
+}
+
+.friends-joint p {
+    margin: 0;
+	font-size: 14px;
+	color: #000000;
+	line-height: 17px;
+}
+
+.progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: #B69F6E;
+    /*-webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);*/
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+    width: 15%;
+}
+
+.friends-joint .progress-friends {
+    text-align: left;
+    -webkit-padding-start: 0;
+    padding-top: 7.5%;
+}
+
+.progress-friends-award {
+    text-align: left;
+    -webkit-padding-start: 0;
+    margin-top: 2em;
+}
+
+.progress {
+    height: 5px;
+    margin: 20px 0 20px;
+    overflow: hidden;
+    background-color: #D8D8D8;
+    /*-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);*/
+    width: 100%;
+}
+
+.progress-friends li,
+.progress-friends-award li {
+    text-align: center;
+    list-style: none;
+    font-size: 14px;
+    width: 18%;
+	padding: 0;
+	margin: 0;
+    display: inline-block;
+}
+
+.progress-friends-award li {
+    vertical-align: top;
+}
+
+.progress-friends li:first-child,
+.progress-friends-award li:first-child {
+    width: 26%;
+}
+
+.progress-friends li p,
+.progress-friends-award li p {
+	padding: 0 10%;
+}
+
+.progress-friends li:first-child p,
+.progress-friends-award li:first-child p {
+	padding-left: 0; text-align: left;
+}
+.progress-friends-award li:first-child p {
+	padding-top: 8px;
+}
+
+.progress-friends li p {
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.progress-friends li p.friend-total {
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    background: #D8D8D8;
+    border-radius: 40px;
+	line-height: 40px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.reward {
+    font-size: 12px;
+}
+
+.friends-joint .progress-friends-award li p.friend-text {
+    text-align: center;
+	font-size: 12px;
+	color: #000000;
+	line-height: 15px;
+}
+
+.friend-text {
+    text-align: center;
+}
+
+.footer {
+    background: #222222;
+    padding: 40px 5%;
+	color: #6D6D6D;
+}
+
+.footer p {
+    text-align: center;
+    font-size: 12px;
+	line-height: normal;
+    margin: 0;
+	padding: 0;
+}
+
+.footer a {
+	color: #fff;
+}
+
+.term-condition {
+    margin: 0 auto;
+}
+
+.term-condition p:first-child {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 14px;
+	padding-bottom: 5px;
+}
+
+@media screen and (max-width: 768px) {
+	.image-left {
+		display: none;
+	}
+    .text-right {
+        float: none;
+        width: auto;
+		margin: 0 auto;
+		padding-bottom: 50px;
+	}
+	.friends-joint ul {
+		float: left;
+		width: 50%;
+		margin-top: 50px;
+	}
+	.progress {
+		display: none;
+	}
+	.progress-friends li,
+	.progress-friends-award li,
+	.progress-friends li:first-child,
+	.progress-friends-award li:first-child {
+		width: auto;
+		display: block;
+		height: 50px;
+	}
+	.progress-friends li p,
+	.progress-friends-award li p {
+		padding: 0 5%;
+	}
+	.friends-joint .progress-friends-award li p.friend-text {
+		line-height: 40px; white-space: nowrap;
+	}
+	.progress-friends li:first-child p,
+	.progress-friends-award li:first-child p {
+		padding: 0 10%; text-align: center;
+	}
+	.friends-joint .progress-friends {
+		padding-top: 0;
+	}
+	.progress-friends-award {
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.friends-joint ul.progress-friends {
+		width: 35%;
+	}
+	.friends-joint ul.progress-friends-award {
+		width: 65%;
+	}
+	.progress-friends li:first-child p,
+	.progress-friends-award li:first-child p {
+		white-space: nowrap;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.friends-joint {
+		padding-right: 2%; padding-left: 2%;
+	}
+	.friends-joint ul.progress-friends {
+		width: 20%;
+	}
+	.friends-joint ul.progress-friends-award {
+		width: 80%;
+	}
+	.friends-joint .progress-friends-award li p.friend-text {
+		text-align: left;
+	}
+}
