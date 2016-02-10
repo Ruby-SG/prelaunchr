@@ -455,12 +455,12 @@ a.watch-demo {
     margin: 40px auto 0;
 }
 .demo-iphone {
-	height: 721px;
-	width: 40%;
+    height: 721px;
+    width: 40%;
     float: left;
 }
 .video-phone {
-	background: url(../images/bg-iphone.png) no-repeat 0 0;
+    background: url(../images/bg-iphone.png) no-repeat 0 0;
     width: 288px;
     height: 504px;
     padding: 75px 65px 150px 56px;
@@ -481,9 +481,6 @@ a.watch-demo {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
 }
-
-
-
 @media screen and (max-width: 900px) {
     .wrap {
         padding: 0 2.5%;
@@ -497,9 +494,9 @@ a.watch-demo {
 }
 
 @media screen and (max-width: 768px) {
-	h1.logo {
-		text-align: center;
-	}
+    h1.logo {
+        text-align: center;
+    }
     .landing-content, .demo-iphone {
         float: none;
         width: auto;
@@ -514,30 +511,30 @@ a.watch-demo {
         margin: 0 auto;
         text-align: center;
     }
-	h2 {
-		font-size: 36px;
-		line-height: 40px;
-		text-align: center;
-	}
-	h3 {
-		font-size: 20px;
-		line-height: 30px;
-		text-align: center;
-	}
+    h2 {
+        font-size: 36px;
+        line-height: 40px;
+        text-align: center;
+    }
+    h3 {
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 480px) {
-	.video-phone {
-		width: 320px; width: 226px;
-		height: 577px; height: 400px;
-		background-size: 320px,577px;
-   		padding: 62px 60px 164px 34px;
-		padding: 62px 47px 115px 47px;
-	}
+    .video-phone {
+        width: 320px; width: 226px;
+        height: 577px; height: 400px;
+        background-size: 320px,577px;
+        padding: 62px 60px 164px 34px;
+        padding: 62px 47px 115px 47px;
+    }
 }
 
 @media screen and (max-width: 320px) {
-	.demo-iphone {
-		width: 1px; height: 1px; position: relative; overflow: hidden;
-	}
+    .demo-iphone {
+        width: 1px; height: 1px; position: relative; overflow: hidden;
+    }
 }
