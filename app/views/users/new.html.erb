@@ -66,7 +66,12 @@
             <p>OPEN FOR PRIVATE BETA ACCESS</p>
             <a href="#form-signup" class="cta form-popup">SIGN UP NOW</a>
             <p>ALREADY SIGNED UP? <a href="#form-login" class="form-popup">SIGN IN HERE</a></p>
-            <a href="http://www.youtube.com/embed/4klLf_V97pA?autoplay=1" class="watch-demo video-popup fancybox.iframe"><span>Watch the demo</span></a>
+            <a href="http://www.youtube.com/embed/4klLf_V97pA?autoplay=1" class="watch-demo video-popup fancybox.iframe">
+            <div class="icon-button-play"></div>
+            <span>Watch the demo</span>
+            </a>
+            </div>
+
             <div style="display:none">
                 <div id="form-signup">
                     <%= form_for @user, :url => { :action => "create" }, html: {class: 'clearfix popup-form'} do |f| %>
