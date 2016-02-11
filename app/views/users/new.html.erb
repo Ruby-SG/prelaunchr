@@ -1,115 +1,50 @@
-<!DOCTYPE HTML>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
-<head>
-    <link rel="shortcut icon" href="http://d2owzzusdvisuq.cloudfront.net/img/favicon.ico">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="Savile Row Society, Personal stylist, personal shopping, Menswear online shopping, Men&amp;#039;s fashion clothing Online, Buy Mens Clothing Online, personal online shopping, online fashion website, Online shopping website, online fashion shopping" />
-    <meta name="description" content="Savile Row Society is a mens personal shopping platform that connects professional men with personal stylists. Buy Mens designer fashion clothing Online at USA favourite online fashion shopping website - savilerowsociety.com" />
-    <link rel="shortcut icon" type="text/css" href="http://www.savilerowsociety.com/" />
-    <link rel="apple-touch-icon" type="text/css" href="http://www.savilerowsociety.com/css/img/css/apple-touch-icon.png.css" />
-    <link rel="apple-touch-icon" type="text/css" href="http://www.savilerowsociety.com/css/img/css/apple-touch-icon-72x72.png.css" sizes="72x72" />
-    <link rel="apple-touch-icon" type="text/css" href="http://www.savilerowsociety.com/css/img/css/apple-touch-icon-114x114.png.css" sizes="114x114" />
-    <script src="https://use.typekit.net/mpj5nps.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
-    <script type="text/javascript">
-        <!--//--><![CDATA[//><!--
-            if (document.images) {
-                img1 = new Image();
-                img2 = new Image();
+<%= render 'header'%>
 
-                img1.src = "images/img-signup.png";
-                img2.src = "images/img-login.png";
-            }
-        //--><!]]>
-    </script>
-    <link rel="stylesheet" type="text/css" href="css/style-alt.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
-    <!--[if lt IE 9]>
-        <script type="text/javascript" src="http://d2owzzusdvisuq.cloudfront.net/js/common/jquery-1.11.0.min.js"></script>
-    <![endif]-->
-    <!--[if (gte IE 9) | (!IE)]><!-->
-        <script type="text/javascript" src="http://d2owzzusdvisuq.cloudfront.net/js/common/jquery-2.1.0.min.js"></script>
-    <!--<![endif]-->
-    <title>Savil.me - Personal Stylist Menswear Online Fashion Shopping Website</title>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<div class="landing-content">
+    <h2>On demand, style innovation</h2>
+    <h3>Technology made to enhance a man's everyday life.</h3>
+    <div class="separator"></div>
+    <p>OPEN FOR PRIVATE BETA ACCESS</p>
+    <a href="#form-signup" class="cta form-popup">SIGN UP NOW</a>
+    <p>ALREADY SIGNED UP? <a href="#form-login" class="form-popup">SIGN IN HERE</a></p>
+    <a href="http://www.youtube.com/embed/4klLf_V97pA?autoplay=1" class="watch-demo video-popup fancybox.iframe">
+    <div class="icon-button-play"></div>
+    <span>Watch the demo</span>
+    </a>
+    </div>
 
-      ga('create', 'UA-36935088-1', 'auto');
-      ga('send', 'pageview');
+    <div style="display:none">
+        <div id="form-signup">
+            <%= form_for @user, :url => { :action => "create" }, html: {class: 'clearfix popup-form'} do |f| %>
+                <p class="button-facebook"><a href="/auth/facebook" class="clearfix"><span class="icon"></span><span class="text">SIGN UP WITH FACEBOOK</span></a></p>
+                <p class="divider-or"><span>OR</span></p>
 
-    </script>
-</head>
-<body>
-    <div class="wrap">
-        <div class="header clearfix">
-            <h1 class="logo"><img src="images/Savil.me-logo.png" alt="Savil.me" /></h1>
-            <ul>
-                <li><a href="http://twitter.com/srsocietydotcom" target="_blank" class="icon-twitter">Twitter</a></li>
-                <li><a href="http://facebook.com/SavileRowSociety" target="_blank" class="icon-facebook">Facebook</a></li>
-                <li><a href="http://www.savilerowsociety.com/blog/" target="_blank" class="icon-rss">RSS Feed</a></li>
-                <li><a href="https://instagram.com/savilerowsociety" target="_blank" class="icon-instagram">Instagram</a></li>
-            </ul>
-        </div><!--/.header-->
-        <div class="landing-content">
-            <h2>On demand, style innovation</h2>
-            <h3>Technology made to enhance a man's everyday life.</h3>
-            <div class="separator"></div>
-            <p>OPEN FOR PRIVATE BETA ACCESS</p>
-            <a href="#form-signup" class="cta form-popup">SIGN UP NOW</a>
-            <p>ALREADY SIGNED UP? <a href="#form-login" class="form-popup">SIGN IN HERE</a></p>
-            <a href="http://www.youtube.com/embed/4klLf_V97pA?autoplay=1" class="watch-demo video-popup fancybox.iframe">
-            <div class="icon-button-play"></div>
-            <span>Watch the demo</span>
-            </a>
-            </div>
+                <div class='input-form'><input type="email" placeholder="Enter your email" name="user[email]" class="subscribe_textfield" /></div>
 
-            <div style="display:none">
-                <div id="form-signup">
-                    <%= form_for @user, :url => { :action => "create" }, html: {class: 'clearfix popup-form'} do |f| %>
-                        <p class="button-facebook"><a href="/auth/facebook" class="clearfix"><span class="icon"></span><span class="text">SIGN UP WITH FACEBOOK</span></a></p>
-                        <p class="divider-or"><span>OR</span></p>
-
-                        <div class='input-form'><input type="email" placeholder="Enter your email" name="user[email]" class="subscribe_textfield" /></div>
-
-                        <button type="submit">SUBMIT</button>
-                        <br class="clearit" />
-                        <p class="signup-signin">ALREADY SIGNED UP? <a href="#form-login" class="form-popup">SIGN IN HERE</a></p>
-                    <% end %>
-                </div>
-                <div id="form-login">
-                    <%= form_for @user, :url => { :action => "create" }, html: {class: 'clearfix popup-form'} do |f| %>
-                        <p class="button-facebook"><a href="/auth/facebook" class="clearfix"><span class="icon"></span><span class="text">LOG IN WITH FACEBOOK</span></a></p>
-                        <p class="divider-or"><span>OR</span></p>
-                        <div class='input-form'><input type="email" placeholder="Enter your email" name="user[email]" class="subscribe_textfield" /></div>
-                        <button type="submit">LOG IN</button>
-                        <br class="clearit" />
-                        <p class="signup-signin">NOT REGISTERED YET? <a href="#form-signup" class="form-popup">SIGN UP HERE</a></p>
-                    <% end %>
-                </div>
-            </div>
-            </div>
-        </div><!--/.landing-content-->
-        <div class="demo-iphone">
-            <div class="video-phone">
-                <div class="video-wrap">
-                    <video id="phone-video" loop autoplay muted>
-                        <source src="videos/iphone.m4v" type="video/mp4" />
-                    </video>
-                </div>
-            </div><!--/.video-phone-->
-        </div><!--/.demo-iphone-->
-    </div><!--/.wrap-->
-    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-</body>
-</html>
+                <button type="submit">SUBMIT</button>
+                <br class="clearit" />
+                <p class="signup-signin">ALREADY SIGNED UP? <a href="#form-login" class="form-popup">SIGN IN HERE</a></p>
+            <% end %>
+        </div>
+        <div id="form-login">
+            <%= form_for @user, :url => { :action => "create" }, html: {class: 'clearfix popup-form'} do |f| %>
+                <p class="button-facebook"><a href="/auth/facebook" class="clearfix"><span class="icon"></span><span class="text">LOG IN WITH FACEBOOK</span></a></p>
+                <p class="divider-or"><span>OR</span></p>
+                <div class='input-form'><input type="email" placeholder="Enter your email" name="user[email]" class="subscribe_textfield" /></div>
+                <button type="submit">LOG IN</button>
+                <br class="clearit" />
+                <p class="signup-signin">NOT REGISTERED YET? <a href="#form-signup" class="form-popup">SIGN UP HERE</a></p>
+            <% end %>
+        </div>
+    </div>
+    </div>
+</div><!--/.landing-content-->
+<div class="demo-iphone">
+    <div class="video-phone">
+        <div class="video-wrap">
+            <video id="phone-video" loop autoplay muted>
+                <source src="videos/iphone.m4v" type="video/mp4" />
+            </video>
+        </div>
+    </div><!--/.video-phone-->
+</div><!--/.demo-iphone-->

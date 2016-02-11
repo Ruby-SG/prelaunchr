@@ -3,8 +3,6 @@ require 'net/https'
 require 'uri'
 
 class UsersController < ApplicationController
-    layout false
-
     before_filter :skip_first_page, :only => :new
 
     def new

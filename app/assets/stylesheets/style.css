@@ -372,7 +372,7 @@ form label {
     margin: 0 auto 20px;
 }
 
-form div {
+form .input-form {
     float: left;
     border: 1px solid #b7bbc0;
     border-right: 0;
@@ -448,7 +448,6 @@ a.watch-demo {
     color: #000;
     letter-spacing: 2px;
     line-height: 26px;
-    background: url(../images/button-play.png) no-repeat 0 50%;
     display: inline-block;
     height: 26px;
     padding-left: 40px;

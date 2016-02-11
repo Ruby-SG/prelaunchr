@@ -11,4 +11,8 @@ module ApplicationHelper
     when 50..1000 then '91%'
     end
   end
+
+  def not_home_page?
+    !(request[:controller] == 'users' && request[:action] == 'new')
+  end
 end

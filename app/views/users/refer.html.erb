@@ -1,151 +1,81 @@
-<!DOCTYPE HTML>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
-<head>
-    <link rel="shortcut icon" href="http://d2owzzusdvisuq.cloudfront.net/img/favicon.ico">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="Savile Row Society, Personal stylist, personal shopping, Menswear online shopping, Men&amp;#039;s fashion clothing Online, Buy Mens Clothing Online, personal online shopping, online fashion website, Online shopping website, online fashion shopping" />
-    <meta name="description" content="Savile Row Society is a mens personal shopping platform that connects professional men with personal stylists. Buy Mens designer fashion clothing Online at USA favourite online fashion shopping website - savilerowsociety.com" />
-    <link rel="shortcut icon" type="text/css" href="http://www.savilerowsociety.com/" />
-    <link rel="apple-touch-icon" type="text/css" href="http://www.savilerowsociety.com/css/img/css/apple-touch-icon.png.css" />
-    <link rel="apple-touch-icon" type="text/css" href="http://www.savilerowsociety.com/css/img/css/apple-touch-icon-72x72.png.css" sizes="72x72" />
-    <link rel="apple-touch-icon" type="text/css" href="http://www.savilerowsociety.com/css/img/css/apple-touch-icon-114x114.png.css" sizes="114x114" />
-    <script src="https://use.typekit.net/mpj5nps.js"></script>
-    <script>
-    try {
-        Typekit.load({
-            async: true
-        });
-    } catch (e) {}
-    </script>
-    <link rel="stylesheet" type="text/css" href="css/style-alt.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="css/referral.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
-    <!--[if lt IE 9]>
-        <script type="text/javascript" src="http://d2owzzusdvisuq.cloudfront.net/js/common/jquery-1.11.0.min.js"></script>
-    <![endif]-->
-    <!--[if (gte IE 9) | (!IE)]><!-->
-    <script type="text/javascript" src="http://d2owzzusdvisuq.cloudfront.net/js/common/jquery-2.1.0.min.js"></script>
-
-    <!--<![endif]-->
-    <title>Savil.me - Personal Stylist Menswear Online Fashion Shopping Website</title>
-</head>
-
-<body>
-    <div class="background clearfix">
-        <div class="signing-up">
-            <div class="signing-up-text">
-                <p>thanks for signing up! we'll be in touch!</p>
+<div class="background clearfix">
+    <%= render 'signup_msg'%>
+    <%= render 'header' %>
+    <!--/.wrap-->
+    <div class="image-left">
+        <img src="images/referral-image.png">
+    </div>
+    <div class="text-right">
+        <h4>HELP US WITH BETA TESTING</h4>
+        <h2>INVITE FRIENDS &amp; EARN REWARDS</h2>
+        <p>Share your unique link via email, Facebook or Twitter and earn great rewards from SAVIL.ME for each friend who signs up.</p>
+        <form class="referral-copy">
+            <br class="clearit" />
+            <div>
+                <input type="text" value="<%= root_url %>?ref=<%= @user.referral_code %>" class="copy_textfield" id='copy-url'/>
             </div>
-        </div>
-        <div class="wrap">
-            <div class="header clearfix">
-                <h1 class="logo"><img src="images/Savil.me-logo.png" alt="Savil.me" /></h1>
-                <ul>
-                    <li><a href="#" class="icon-twitter">Twitter</a></li>
-                    <li><a href="#" class="icon-facebook">Facebook</a></li>
-                    <li><a href="#" class="icon-rss">RSS Feed</a></li>
-                    <li><a href="#" class="icon-instagram">Instagram</a></li>
-                </ul>
-            </div>
-            <!--/.header-->
-        </div>
-        <!--/.wrap-->
-        <div class="image-left">
-            <img src="images/referral-image.png">
-        </div>
-        <div class="text-right">
-            <h4>HELP US WITH BETA TESTING</h4>
-            <h2>INVITE FRIENDS &amp; EARN REWARDS</h2>
-            <p>Share your unique link via email, Facebook or Twitter and earn great rewards from SAVIL.ME for each friend who signs up.</p>
-            <form class="referral-copy">
-                <br class="clearit" />
-                <div>
-                    <input type="text" value="<%= root_url %>?ref=<%= @user.referral_code %>" class="copy_textfield" id='copy-url'/>
-                </div>
-                <button type="button" id='click-to-copy' data-clipboard-target="#copy-url">COPY</button>
-                <br class="clearit" />
-                <% twitter_message = "Savil.me is evolving." %>
-                <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>&ref=<%= CGI::escape(@user.referral_code) %>&title=Savil" class="facebook-icon" target="_blank"><img src="images/facebook-button.png"></a>
-                <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twitter-icon" target="_blank"><img src="images/twitter-button.png"></a>
-            </form>
-        </div>
+            <button type="button" id='click-to-copy' data-clipboard-target="#copy-url">COPY</button>
+            <br class="clearit" />
+            <% twitter_message = "Savil.me is evolving." %>
+            <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>&ref=<%= CGI::escape(@user.referral_code) %>&title=Savil" class="facebook-icon" target="_blank"><img src="images/facebook-button.png"></a>
+            <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twitter-icon" target="_blank"><img src="images/twitter-button.png"></a>
+        </form>
     </div>
-    <% referrals_count = @user.referrals.count %>
+</div>
+<% referrals_count = @user.referrals.count %>
 
-    <%
-      words = ''
-      if referrals_count == 1
-        words = 'friend has'
-      elsif
-        words = 'friends have'
-      end
-    %>
+<%
+  words = ''
+  if referrals_count == 1
+    words = 'friend has'
+  elsif
+    words = 'friends have'
+  end
+%>
 
-    <div class="friends-joint clearfix">
-        <% if referrals_count == 0 %>
-          <p>No friends have joined - yet!</p>
-          <p>Keep spreading the word and check back again soon.</p>
-        <% else %>
-          <p class="place brandon"><span><%= referrals_count %></span> <%= words %> joined</p>
-        <% end %>
+<div class="friends-joint clearfix">
+    <% if referrals_count == 0 %>
+      <p>No friends have joined - yet!</p>
+      <p>Keep spreading the word and check back again soon.</p>
+    <% else %>
+      <p class="place brandon"><span><%= referrals_count %></span> <%= words %> joined</p>
+    <% end %>
 
-        <ul class="progress-friends">
-            <li>
-                <p>friends joined</p>
-            </li>
-            <li>
-                <p class="friend-total <%= selected_class(5, 10, referrals_count) %>">5</p>
-            </li>
-            <li>
-                <p class="friend-total <%= selected_class(10, 25, referrals_count) %>">10</p>
-            </li>
-            <li>
-                <p class="friend-total <%= selected_class(25, 50, referrals_count) %>">25</p>
-            </li>
-            <li>
-                <p class="friend-total <%= selected_class(50, 1000, referrals_count) %>">50</p>
-            </li>
-        </ul>
-        <div class="progress">
-            <div class="progress-bar" style='width: <%= width_class(referrals_count) %>'></div>
-        </div>
-        <ul class="progress-friends-award">
-            <li>
-                <p>REWARDS EARNED</p>
-            </li>
-            <li>
-                <p class="friend-text">One-year subscription to GQ® magazine</p>
-            </li>
-            <li>
-                <p class="friend-text">One-year subscription to Dollar Shave Club®</p>
-            </li>
-            <li>
-                <p class="friend-text">$100 credit for use at Savile.Me</p>
-            </li>
-            <li>
-                <p class="friend-text">One premium fitted suit</p>
-            </li>
-        </ul>
+    <ul class="progress-friends">
+        <li>
+            <p>friends joined</p>
+        </li>
+        <li>
+            <p class="friend-total <%= selected_class(5, 10, referrals_count) %>">5</p>
+        </li>
+        <li>
+            <p class="friend-total <%= selected_class(10, 25, referrals_count) %>">10</p>
+        </li>
+        <li>
+            <p class="friend-total <%= selected_class(25, 50, referrals_count) %>">25</p>
+        </li>
+        <li>
+            <p class="friend-total <%= selected_class(50, 1000, referrals_count) %>">50</p>
+        </li>
+    </ul>
+    <div class="progress">
+        <div class="progress-bar" style='width: <%= width_class(referrals_count) %>'></div>
     </div>
-    <div class="footer">
-        <div class="term-condition">
-            <p><a href="/term">Terms &amp; Conditions</a> &nbsp|&nbsp <a href="/privacy-policy">Privacy Policy</a></p>
-            <p>*GQ &amp; Dollar Shave Club are in no way affiliated with this contest</p>
-            <p>GQ&reg; is a registered trademark of Conde Nast Inc.</p>
-        </div>
-    </div>
-    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-    <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.5/dist/clipboard.min.js"></script>
-    <script type="text/javascript" src="js/ZeroClipboard.js"></script>
-    <script type="text/javascript" src="js/jquery.zeroclipboard.js"></script>
-</body>
-
-</html>
+    <ul class="progress-friends-award">
+        <li>
+            <p>REWARDS EARNED</p>
+        </li>
+        <li>
+            <p class="friend-text">One-year subscription to GQ® magazine</p>
+        </li>
+        <li>
+            <p class="friend-text">One-year subscription to Dollar Shave Club®</p>
+        </li>
+        <li>
+            <p class="friend-text">$100 credit for use at Savile.Me</p>
+        </li>
+        <li>
+            <p class="friend-text">One premium fitted suit</p>
+        </li>
+    </ul>
+</div>
