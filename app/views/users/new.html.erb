@@ -1,51 +1,53 @@
 <% @title = 'Savil.me - Personal Stylist Menswear Online Fashion Shopping Website'%>
 <%= render 'header'%>
 
-<div class="landing-content">
-    <h2>On demand, style innovation</h2>
-    <h3>Technology made to enhance a man's everyday life.</h3>
-    <div class="separator"></div>
-    <p>OPEN FOR PRIVATE BETA ACCESS</p>
-    <a href="#form-signup" class="cta form-popup">SIGN UP NOW</a>
-    <p>ALREADY SIGNED UP? <a href="#form-login" class="form-popup">SIGN IN HERE</a></p>
-    <a href="http://www.youtube.com/embed/4klLf_V97pA?autoplay=1" class="watch-demo video-popup fancybox.iframe">
-    <div class="icon-button-play"></div>
-    <span>Watch the demo</span>
-    </a>
-    </div>
-
-    <div style="display:none">
-        <div id="form-signup">
-            <%= form_for @user, :url => { :action => "create" }, html: {class: 'clearfix popup-form'} do |f| %>
-                <p class="button-facebook"><a href="/auth/facebook" class="clearfix"><span class="icon"></span><span class="text">SIGN UP WITH FACEBOOK</span></a></p>
-                <p class="divider-or"><span>OR</span></p>
-
-                <div class='input-form'><input type="email" placeholder="Enter your email" name="user[email]" class="subscribe_textfield" /></div>
-
-                <button type="submit">SUBMIT</button>
-                <br class="clearit" />
-                <p class="signup-signin">ALREADY SIGNED UP? <a href="#form-login" class="form-popup">SIGN IN HERE</a></p>
-            <% end %>
+<div class='wrap'>
+    <div class="landing-content">
+        <h2>On demand, style innovation</h2>
+        <h3>Technology made to enhance a man's everyday life.</h3>
+        <div class="separator"></div>
+        <p>OPEN FOR PRIVATE BETA ACCESS</p>
+        <a href="#form-signup" class="cta form-popup">SIGN UP NOW</a>
+        <p>ALREADY SIGNED UP? <a href="#form-login" class="form-popup">SIGN IN HERE</a></p>
+        <a href="http://www.youtube.com/embed/4klLf_V97pA?autoplay=1" class="watch-demo video-popup fancybox.iframe">
+        <div class="icon-button-play"></div>
+        <span>Watch the demo</span>
+        </a>
         </div>
-        <div id="form-login">
-            <%= form_for @user, :url => { :action => "create" }, html: {class: 'clearfix popup-form'} do |f| %>
-                <p class="button-facebook"><a href="/auth/facebook" class="clearfix"><span class="icon"></span><span class="text">LOG IN WITH FACEBOOK</span></a></p>
-                <p class="divider-or"><span>OR</span></p>
-                <div class='input-form'><input type="email" placeholder="Enter your email" name="user[email]" class="subscribe_textfield" /></div>
-                <button type="submit">LOG IN</button>
-                <br class="clearit" />
-                <p class="signup-signin">NOT REGISTERED YET? <a href="#form-signup" class="form-popup">SIGN UP HERE</a></p>
-            <% end %>
+
+        <div style="display:none">
+            <div id="form-signup">
+                <%= form_for @user, :url => { :action => "create" }, html: {class: 'clearfix popup-form'} do |f| %>
+                    <p class="button-facebook"><a href="/auth/facebook" class="clearfix"><span class="icon"></span><span class="text">SIGN UP WITH FACEBOOK</span></a></p>
+                    <p class="divider-or"><span>OR</span></p>
+
+                    <div class='input-form'><input type="email" placeholder="Enter your email" name="user[email]" class="subscribe_textfield" /></div>
+
+                    <button type="submit">SUBMIT</button>
+                    <br class="clearit" />
+                    <p class="signup-signin">ALREADY SIGNED UP? <a href="#form-login" class="form-popup">SIGN IN HERE</a></p>
+                <% end %>
+            </div>
+            <div id="form-login">
+                <%= form_for @user, :url => { :action => "create" }, html: {class: 'clearfix popup-form'} do |f| %>
+                    <p class="button-facebook"><a href="/auth/facebook" class="clearfix"><span class="icon"></span><span class="text">LOG IN WITH FACEBOOK</span></a></p>
+                    <p class="divider-or"><span>OR</span></p>
+                    <div class='input-form'><input type="email" placeholder="Enter your email" name="user[email]" class="subscribe_textfield" /></div>
+                    <button type="submit">LOG IN</button>
+                    <br class="clearit" />
+                    <p class="signup-signin">NOT REGISTERED YET? <a href="#form-signup" class="form-popup">SIGN UP HERE</a></p>
+                <% end %>
+            </div>
         </div>
-    </div>
-    </div>
-</div><!--/.landing-content-->
-<div class="demo-iphone">
-    <div class="video-phone">
-        <div class="video-wrap">
-            <video id="phone-video" loop autoplay muted>
-                <source src="videos/iphone.m4v" type="video/mp4" />
-            </video>
         </div>
-    </div><!--/.video-phone-->
-</div><!--/.demo-iphone-->
+    </div><!--/.landing-content-->
+    <div class="demo-iphone">
+        <div class="video-phone">
+            <div class="video-wrap">
+                <video id="phone-video" loop autoplay muted>
+                    <source src="videos/iphone.m4v" type="video/mp4" />
+                </video>
+            </div>
+        </div><!--/.video-phone-->
+    </div><!--/.demo-iphone-->
+</div>
