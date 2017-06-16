@@ -39,25 +39,12 @@
         | ?ref=
         = CGI::escape(@user.referral_code)
         | &title=Spousewell" class="fb" target="_blank">
-- referrals_count = @user.referrals.count
-- 
--     stops = User::REFERRAL_STEPS
-- 
--     found = nil
-- 
--     stops.reverse_each { |stop|
--         if stop["count"] <= referrals_count and !found
--             stop["selected"] = true
--             found = stop
--         else
--             stop["selected"] = false
--         end
--     }
-|  <div class="prizes 
-- if found
+
+|  <div class="prizes
+- if @found
   | prize-
-  = found["class"]
-| "> 
+  = @found["class"]
+| ">
 .page-content
   p.callout.brandon
     | Here's How It Works:
@@ -67,13 +54,13 @@
         | Friends Joined
       p.rewards
         | Spousewell Product
-    - stops.each do |stop|
-      |  <li class="product brandon 
+    - @stops.each do |stop|
+      |  <li class="product brandon
       - if stop["selected"]
         | selected
       - if stop["class"] == 'five'
         | last
-      | "> 
+      | ">
       .circle
         = stop["count"]
       .sep
@@ -82,17 +69,12 @@
       .tooltip
         |  <img src="
         = stop["image"]
-        | " height="254"> 
+        | " height="254">
   .progress
     .mover
       .bar.clearfix
-  - words = ''
-  -             if referrals_count == 1
-  -                 words = 'friend has'
-  -             elsif
-  -                 words = 'friends have'
-  -             end
-  - if referrals_count == 0
+
+  - if @referrals_count == 0
     p.place.brandon
       span
         | No
@@ -100,8 +82,8 @@
   - else
     p.place.brandon
       span
-        = referrals_count
-      = words
+        = @referrals_count
+      = @words
       |  joined
   p.check.brandon
     | Keep checking
