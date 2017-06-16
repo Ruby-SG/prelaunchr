@@ -1,0 +1,32 @@
+doctype html
+|  <html class="
+= @bodyId
+| "> 
+head
+  title
+    | SPOUSEWELL – Tell Friends, Join for Free
+  |  <link rel="icon" href="
+  = asset_path('favicon.png')
+  | "> <link rel="shortcut icon" href="
+  = asset_path('favicon.png')
+  | "> 
+  meta[property="fb:app_id" content="352593494907606"]
+  meta[property="og:title" content="Spousewell is coming!"]
+  meta[property="og:description" content="Spousewell is coming! Wedding is within reach. Didn’t want to leave you all behind. Check out Spousewell here"]
+  |  <meta property="og:image" content="
+  = root_url
+  = asset_path("refer/gift.png")
+  | "/> <meta property="og:url" content="
+  = root_url
+  | "/> 
+  - if @is_mobile
+    - if @bodyId == 'home'
+      meta[name="viewport" content="width=1600"]
+    - else
+      meta[name="viewport" content="width=1120"]
+  = stylesheet_link_tag "core.css", :media => "all"
+  = csrf_meta_tags
+|  <body id="
+= @bodyId
+| "> 
+= yield

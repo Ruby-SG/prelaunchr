@@ -1,0 +1,111 @@
+.header
+  .content
+    p.logo.brandon
+      | SPOUSEWELL
+    p.byline.brandon
+      | THANK YOU FOR SIGNING UP
+.hero
+  .page-content.clearfix
+    .mammoth
+      span.need.brandon
+        | Wedding is
+        br
+        | within reach
+    .share-wrap
+      p.why.brandon
+        | Don't leave your friends behind
+      p.title.brandon
+        | INVITE FRIENDS &
+        br
+        | Earn Product
+      p.subtitle.brandon
+        | Share your unique link via email or Facebook
+        br
+        | and earn Spousewell goods for
+        br
+        | each friend who signs up.
+      .copy-link.brandon
+        = root_url
+        | ?ref=
+        = @user.referral_code
+      - twitter_message = "#Shaving is evolving. Excited for @spousewell to launch."
+      .social-links
+        |  <a href="
+        = invite_friends_path
+        | " class="email">
+        .sep
+        |  <a href="http://www.facebook.com/sharer/sharer.php?u=
+        = CGI::escape(root_url)
+        | ?ref=
+        = CGI::escape(@user.referral_code)
+        | &title=Spousewell" class="fb" target="_blank">
+- referrals_count = @user.referrals.count
+- 
+-     stops = User::REFERRAL_STEPS
+- 
+-     found = nil
+- 
+-     stops.reverse_each { |stop|
+-         if stop["count"] <= referrals_count and !found
+-             stop["selected"] = true
+-             found = stop
+-         else
+-             stop["selected"] = false
+-         end
+-     }
+|  <div class="prizes 
+- if found
+  | prize-
+  = found["class"]
+| "> 
+.page-content
+  p.callout.brandon
+    | Here's How It Works:
+  ul.products.clearfix
+    li.title.brandon
+      p.friends
+        | Friends Joined
+      p.rewards
+        | Spousewell Product
+    - stops.each do |stop|
+      |  <li class="product brandon 
+      - if stop["selected"]
+        | selected
+      - if stop["class"] == 'five'
+        | last
+      | "> 
+      .circle
+        = stop["count"]
+      .sep
+      p
+        = stop["html"].html_safe
+      .tooltip
+        |  <img src="
+        = stop["image"]
+        | " height="254"> 
+  .progress
+    .mover
+      .bar.clearfix
+  - words = ''
+  -             if referrals_count == 1
+  -                 words = 'friend has'
+  -             elsif
+  -                 words = 'friends have'
+  -             end
+  - if referrals_count == 0
+    p.place.brandon
+      span
+        | No
+      |  friends have joined...Yet!
+  - else
+    p.place.brandon
+      span
+        = referrals_count
+      = words
+      |  joined
+  p.check.brandon
+    | Keep checking
+  p.ship.brandon
+    | We Ship Worldwide
+  a.policy.brandon[href="/privacy-policy" target="_blank"]
+    | Privacy Policy

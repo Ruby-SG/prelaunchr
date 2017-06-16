@@ -1,0 +1,32 @@
+.hero
+  p.large.brandon
+    | SPOUSEWELL IS COMING
+  p.small.brandon
+    | PRAYING TO MEET GODLY SPOUSE
+    span.center
+      | Since Like...Right Now.
+|  <div class="form-wrap clearfix 
+= "ended" if Rails.application.config.ended
+| "> 
+- if Rails.application.config.ended
+  p.thanks.brandon
+    | THANK YOU FOR PARTICIPATING
+    br
+    | IN OUR PRE-LAUNCH.
+  p.compiling.brandon
+    | WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL
+    br
+    | COUPON CODES TO ALL RECIPIENTS IN THE NEXT DAY OR TWO
+  p.go-to.brandon
+    | In the meantime, head to 
+    a[href="http://www.spousewell.com/"]
+      | WWW.spousewell SPOUSEWELL.COM
+  p.again.brandon
+    | Thank You Again!
+- else
+  .key
+  p.byline.brandon
+    | Be the first to know
+  = form_for @user, :url => { :action => "create" } do |f|
+    = f.text_field :email, :placeholder => "Enter Email", :class => "email brandon"
+    input.submit.brandon[name="commit" type="submit" value="Step Inside"]
