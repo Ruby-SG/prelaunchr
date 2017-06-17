@@ -41,6 +41,7 @@ form{
 
 html.home{
 	background: url(/assets/refer/bg.jpg);
+	font-family: 'Conv_Confidential-Regular',Sans-Serif;
 }
 
 #home{
@@ -67,6 +68,7 @@ html.home{
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  margin-top: 30px;
 }
 
 #home .hero .img-logo img{
@@ -79,6 +81,14 @@ html.home{
 
 #home .hero .img-text{
 	text-align: center;
+	font-family: 'Conv_Confidential-Regular',Sans-Serif;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 9.6875em;
+  text-align: center;
+  letter-spacing: -5px;
+  padding-right: 20px;
+  margin-top: 20px;
 }
 
 #home .hero .large{
@@ -116,14 +126,13 @@ html.home{
 	width: 46px;
 	height: 19px;
 	margin: 0 auto;
-	background: url(/assets/home/key.png) 0 0 no-repeat;
 	background-size: 46px 19px;
 }
 
 #home .form-wrap .byline{
 	font-size: 15px;
 	text-transform: uppercase;
-	color: #074E6F;
+	color: #ae0e5f;
 	text-align: center;
 	font-weight: bold;
 	letter-spacing: 2px;
@@ -133,8 +142,8 @@ html.home{
 #home .form-wrap .email{
 	float: left;
 	font-size: 13px;
-	padding: 8px 0 8px 10px;
-	border: 1px solid #074E6F;
+	padding: 10px 0 8px 10px;
+	border: 1px solid #ae0e5f;
 	width: 256px;
 	outline: none;
 	letter-spacing: 1px;
@@ -142,15 +151,15 @@ html.home{
 
 #home .form-wrap .submit{
 	width: 143px;
-	background: #074E6F;
-	float: left;
-	height: 37px;
-	line-height: 37px;
-	color: #FFF;
-	font-size: 13px;
-	text-transform: uppercase;
-	border: 0;
-	letter-spacing: 2px;
+  background: #ae0e5f;
+  float: left;
+  height: 33px;
+  line-height: 33px;
+  color: #FFF;
+  font-size: 13px;
+  text-transform: uppercase;
+  border: 0;
+  letter-spacing: 2px;
 }
 
 #home .form-wrap.ended{
@@ -273,10 +282,6 @@ html.home{
 	visibility: hidden;
 }
 
-.brandon{
-	font-family: "Brandon Grotesque", "brandon-grotesque", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-}
-
 #refer{
 	background: #FFF;
 }
@@ -330,7 +335,7 @@ html.home{
 
 #refer .hero .img-logo{
 	position: absolute;
-	top: 30px;
+	top: 50px;
 	left: 100px;
 }
 
@@ -425,6 +430,7 @@ html.home{
 	background-size: 27px 27px;
 	width: 27px;
 	height: 27px;
+	border-radius: 3px;
 }
 
 #refer .share-wrap .social-links .twit{
@@ -432,6 +438,7 @@ html.home{
 	background-size: 27px 27px;
 	width: 27px;
 	height: 27px;
+	border-radius: 3px
 }
 
 #refer .share-wrap .social-links .sep{
@@ -680,22 +687,18 @@ only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
 	#home .hero{
-		background: url(/assets/home/hero@2x.jpg) center center no-repeat;
 		background-size: 1600px 446px;
 	}
 
 	#home .form-wrap .key{
-		background: url(/assets/home/key@2x.png) 0 0 no-repeat;
 		background-size: 46px 19px;
 	}
 
 	#refer .header .logo{
-		background: url(/assets/refer/logo@2x.png) 0 0 no-repeat;
 		background-size: 106px 19px;
 	}
 
 	#refer .mammoth{
-		background: url(/assets/refer/mammoth@2x.png) 0 0 no-repeat;
 		background-size: 610px 394px;
 	}
 
@@ -735,7 +738,35 @@ only screen and (min-device-pixel-ratio: 2) {
 	}
 }
 
+#video-viewport {
+  position: fixed;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  z-index: -2000;
+  background-color: #000;
+}
 
+#tagline h1 {
+  color: #fff;
+  font-size: 9.6875em;
+  text-shadow: 1px 1px 20px #000;
+  text-align: center;
+  letter-spacing: -5px;
+  padding-right: 20px;
+}
+
+#tagline {
+  width: 900px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 350px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
 
 
 

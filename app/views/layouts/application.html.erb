@@ -3,31 +3,28 @@
 <!--[if IE 7 ]>    <html class="ie7 <%= @bodyId %>"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie8 <%= @bodyId %>"> <![endif]-->
 <!--[if IE 9 ]>    <html class="ie9 <%= @bodyId %>"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="<%= @bodyId %>"> <!--<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="<%= @bodyId %>">
 <head>
-        <title>Lucky's Puccias</title>
-        <link rel="icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
-        <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
+    <title>Lucky's Puccias</title>
+    <meta property="og:title" content="Lucky's Puccias is coming!"/>
+    <meta property="og:description" content="Welcome to Luckys, Where we bring you Austin’s only authentic wood fired Italian sandwiches known as the puccia (POO*CHAH)."/>
+    <meta property="og:url" content="<%= root_url %>"/>
+    <link href="http://fonts.googleapis.com/css?family=Averia+Sans+Libre:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <% if @is_mobile %>
+      <% if @bodyId == 'home' %>
+        <meta name="viewport" content="width=1600" />
+      <% else %>
+        <meta name="viewport" content="width=1120" />
+      <% end %>
+    <% end %>
 
-        <meta property="og:title" content="Lucky's Puccias is coming!"/>
-        <meta property="og:description" content="Shaving is evolving. Didn’t want to leave you all behind. Check out Lucky's Puccias here."/>
-        <meta property="og:image" content="<%= asset_path("refer/truman.png") %>"/>
-        <meta property="og:url" content="<%= root_url %>"/>
-        <link href="http://fonts.googleapis.com/css?family=Averia+Sans+Libre:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-        <% if @is_mobile %>
-            <% if @bodyId == 'home' %>
-                <meta name="viewport" content="width=1600" />
-            <% else %>
-                <meta name="viewport" content="width=1120" />
-            <% end %>
-        <% end %>
-        <%= stylesheet_link_tag "core.css", :media => "all" %>
-        <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag "core.css", :media => "all" %>
+    <%= csrf_meta_tags %>
 </head>
 <body id="<%= @bodyId %>">
 
 <%= yield %>
-
 
 </body>
 </html>

@@ -186,6 +186,3 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
   unicorn
-
-BUNDLED WITH
-   1.15.1
