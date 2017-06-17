@@ -1,0 +1,22 @@
+current directory: /home/mic/thangnpq/prelaunchr/vendor/cache/ruby/2.1.0/gems/unicorn-4.6.0/ext/unicorn_http
+/home/mic/.rvm/rubies/ruby-2.1.3/bin/ruby -r ./siteconf20170617-3670-fqqajf.rb extconf.rb
+checking for SIZEOF_OFF_T in ruby.h... yes
+checking for SIZEOF_SIZE_T in ruby.h... yes
+checking for SIZEOF_LONG in ruby.h... yes
+checking for rb_str_set_len() in ruby.h... yes
+checking for gmtime_r() in time.h... yes
+creating Makefile
+
+current directory: /home/mic/thangnpq/prelaunchr/vendor/cache/ruby/2.1.0/gems/unicorn-4.6.0/ext/unicorn_http
+make "DESTDIR=" clean
+
+current directory: /home/mic/thangnpq/prelaunchr/vendor/cache/ruby/2.1.0/gems/unicorn-4.6.0/ext/unicorn_http
+make "DESTDIR="
+compiling unicorn_http.c
+compiling httpdate.c
+linking shared-object unicorn_http.so
+
+current directory: /home/mic/thangnpq/prelaunchr/vendor/cache/ruby/2.1.0/gems/unicorn-4.6.0/ext/unicorn_http
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 unicorn_http.so ./.gem.20170617-3670-1ejtyca
+installing default unicorn_http libraries
