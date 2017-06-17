@@ -1,0 +1,14 @@
+current directory: /home/mic/thangnpq/prelaunchr/vendor/cache/ruby/2.1.0/gems/json-1.8.6/ext/json
+/home/mic/.rvm/rubies/ruby-2.1.3/bin/ruby -r ./siteconf20170617-26979-qnpfp.rb extconf.rb
+creating Makefile
+
+current directory: /home/mic/thangnpq/prelaunchr/vendor/cache/ruby/2.1.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" clean
+
+current directory: /home/mic/thangnpq/prelaunchr/vendor/cache/ruby/2.1.0/gems/json-1.8.6/ext/json
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+current directory: /home/mic/thangnpq/prelaunchr/vendor/cache/ruby/2.1.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" install
+installing default libraries

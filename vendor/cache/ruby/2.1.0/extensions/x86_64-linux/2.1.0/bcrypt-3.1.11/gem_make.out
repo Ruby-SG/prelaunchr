@@ -1,0 +1,20 @@
+current directory: /home/mic/thangnpq/prelaunchr/vendor/cache/ruby/2.1.0/gems/bcrypt-3.1.11/ext/mri
+/home/mic/.rvm/rubies/ruby-2.1.3/bin/ruby -r ./siteconf20170617-26979-1hfmcpl.rb extconf.rb
+creating Makefile
+
+current directory: /home/mic/thangnpq/prelaunchr/vendor/cache/ruby/2.1.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" clean
+
+current directory: /home/mic/thangnpq/prelaunchr/vendor/cache/ruby/2.1.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR="
+compiling crypt_gensalt.c
+compiling crypt.c
+compiling bcrypt_ext.c
+compiling crypt_blowfish.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.so
+
+current directory: /home/mic/thangnpq/prelaunchr/vendor/cache/ruby/2.1.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20170617-26979-8lam83
+installing default bcrypt_ext libraries
