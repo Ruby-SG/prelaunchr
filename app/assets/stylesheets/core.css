@@ -44,6 +44,11 @@ html.home{
 	font-family: 'Conv_Confidential-Regular',Sans-Serif;
 }
 
+html.refer, html.refer body{
+	height: 100%;
+  background: url(/assets/refer/bg.jpg) !important;
+}
+
 #home{
 	padding-bottom: 50px;
 }
@@ -295,7 +300,7 @@ html.home{
 }
 
 #refer .header{
-	height: 50px;
+	height: 45px;
 	background: url(/assets/refer/bg.jpg);
 	width: 100%;
 	overflow:hidden;
@@ -321,7 +326,7 @@ html.home{
 }
 
 #refer .header .logo{
-	font-size: 30px;
+	font-size: 25px;
 	color: #000;
 	text-align: center;
 	font-family:'Conv_Confidential-Regular';
@@ -330,7 +335,7 @@ html.home{
 
 #refer .hero{
 	background: #ae0e5f;
-	height: 420px;
+	height: 380px;
 	overflow: hidden;
 }
 
@@ -382,7 +387,7 @@ html.home{
 	font-family: 'Conv_Confidential-Regular',Sans-Serif;
 	color: #fff;
 	font-weight: bold;
-	margin-top: 42px;
+	margin-top: 22px;
 }
 
 #refer .share-wrap .title{
@@ -409,7 +414,6 @@ html.home{
 	border: 1px solid #D1D0C7;
 	background: #FFF;
 	padding: 10px 0;
-	width: 320px;
 	text-transform: none;
 	font-size: 11px;
 	margin: 20px auto 0;
@@ -419,7 +423,7 @@ html.home{
 #refer .share-wrap .social-links{
 	width: 120px;
 	height: 37px;
-	margin: 25px auto 0;
+	margin: 10px auto 0;
 	text-align: center;
 }
 
@@ -454,7 +458,7 @@ html.home{
 	width: 100%;
 	background: url(/assets/refer/bg.jpg);
 	border-top: 1px solid #D2D1C8;
-	padding-bottom: 100px;
+	padding-bottom: 20px;
 }
 
 #refer .prizes .page-content{
