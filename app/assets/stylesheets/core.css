@@ -53,16 +53,6 @@ html.home{
 	margin: 0 auto;
 }
 
-#home .hero{
-	width: 100%;
-	height: 400px;
-	background-color: #ae0e5f;
-	background-size: 1600px 446px;
-	overflow: hidden;
-	position: relative;
-	letter-spacing: .09em;
-	margin: 0 auto;
-}
 
 #home .hero .img-logo{
   margin-left: auto;
@@ -72,11 +62,10 @@ html.home{
 }
 
 #home .hero .img-logo img{
-	width: 120px;
-  height: 120px;
   margin-left: auto;
   margin-right: auto;
 	text-align: center;
+	width: 300px;
 }
 
 #home .hero .img-text{
@@ -84,7 +73,7 @@ html.home{
 	font-family: 'Conv_Confidential-Regular',Sans-Serif;
   text-transform: uppercase;
   color: #fff;
-  font-size: 9.6875em;
+  font-size: 5.5em;
   text-align: center;
   letter-spacing: -5px;
   padding-right: 20px;
@@ -137,6 +126,7 @@ html.home{
 	font-weight: bold;
 	letter-spacing: 2px;
 	margin: 15px 0;
+	line-height: 20px;
 }
 
 #home .form-wrap .email{
@@ -329,7 +319,7 @@ html.home{
 
 #refer .hero{
 	background: #ae0e5f;
-	height: 391px;
+	height: 420px;
 	overflow: hidden;
 }
 
@@ -398,7 +388,7 @@ html.home{
 #refer .share-wrap .subtitle{
 	font-family: 'Conv_Confidential-Regular',Sans-Serif;
 	color: #fff;
-	font-size: 14px;
+	font-size: 18px;
 	text-transform: none;
 	margin-top: 15px;
 	line-height: 1.5em;
@@ -412,6 +402,7 @@ html.home{
 	text-transform: none;
 	font-size: 11px;
 	margin: 20px auto 0;
+	font-size: 16px;
 }
 
 #refer .share-wrap .social-links{

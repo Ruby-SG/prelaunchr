@@ -23,10 +23,10 @@
   <p class="again brandon">Thank You Again!</p>
   <% else %>
   <div class="key"></div>
-  <p class="byline brandon">Be the first to know</p>
+  <p class="byline brandon">Join our newsletter, share your special link, earn rewards</p>
   <%= form_for @user, :url => { :action => "create" } do |f| %>
   <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>
-  <input class="submit brandon" name="commit" type="submit" value="Step Inside" />
+  <input class="submit brandon" name="commit" type="submit" value="Italia!" />
   <% end %>
   <% end %>
 </div>
