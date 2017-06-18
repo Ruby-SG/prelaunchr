@@ -53,6 +53,16 @@ html.home{
 	margin: 0 auto;
 }
 
+#home .hero{
+ 	width: 100%;
+ 	height: 400px;
+ 	background-color: #ae0e5f;
+ 	background-size: 1600px 446px;
+ 	overflow: hidden;
+ 	position: relative;
+ 	letter-spacing: .09em;
+ 	margin: 0 auto;
+ }
 
 #home .hero .img-logo{
   margin-left: auto;
@@ -65,7 +75,8 @@ html.home{
   margin-left: auto;
   margin-right: auto;
 	text-align: center;
-	width: 300px;
+	width: 250px;
+	height: 250px;
 }
 
 #home .hero .img-text{
@@ -73,7 +84,7 @@ html.home{
 	font-family: 'Conv_Confidential-Regular',Sans-Serif;
   text-transform: uppercase;
   color: #fff;
-  font-size: 5.5em;
+  font-size: 5em;
   text-align: center;
   letter-spacing: -5px;
   padding-right: 20px;
