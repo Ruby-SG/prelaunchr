@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
             'count' => 12,
             "html" => "$35 gift card!",
             "class" => "five",
-            "image" => ActionController::Base.helpers.asset_path("refer/blade-explain@2x.png")
+            "image" => ActionController::Base.helpers.asset_path("refer/cream-tooltip@2x.png")
         }
     ]
 
