@@ -171,7 +171,7 @@ html.home{
 	width: 143px;
 	background: #074E6F;
 	float: left;
-	height: 37px;
+	height: 33px;
 	line-height: 37px;
 	color: #FFF;
 	font-size: 13px;
@@ -706,19 +706,19 @@ only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
 	#home .hero{
-		background: url(/assets/home/hero@2x.jpg) center center no-repeat;
-		background-size: 1600px 446px;
+		background: url(/assets/home/cropped-beer.jpg) center center no-repeat;
+		background-size: cover;
 	}
 
-	#home .form-wrap .key{
+	/*#home .form-wrap .key{
 		background: url(/assets/home/key@2x.png) 0 0 no-repeat;
 		background-size: 46px 19px;
-	}
+	} */
 
-	#refer .header .logo{
+	/*#refer .header .logo{
 		background: url(/assets/refer/logo@2x.png) 0 0 no-repeat;
 		background-size: 106px 19px;
-	}
+	} */
 
 	#refer .mammoth{
 		background: url(/assets/refer/mammoth@2x.png) 0 0 no-repeat;
