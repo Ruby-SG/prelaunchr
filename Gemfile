@@ -28,7 +28,7 @@ end
 
 gem 'delayed_job_active_record'
 
-gem 'unicorn'
+#gem 'unicorn'
 
 gem "letter_opener", :group => :development
 

@@ -11,4 +11,21 @@ $(document).ready(function(){
 		    }, false);
 		}
 	}
+
+	copyToClipBoard = function() {
+	  var aux, copied;
+	  aux = document.createElement("input");
+	  aux.setAttribute("value", document.getElementById('link-copy-clipboard').value);
+	  document.body.appendChild(aux);
+	  aux.select();
+	  copied = document.execCommand("copy");
+	  document.body.removeChild(aux);
+	  if (copied) {
+	    $('.copied-message').removeClass('hide');
+	    return setTimeout((function() {
+	      return $('.copied-message').addClass('hide');
+	    }), 1500);
+	  }
+	};
+
 })

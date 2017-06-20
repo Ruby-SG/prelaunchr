@@ -89,16 +89,14 @@ html.refer, html.refer body{
 	font-family: 'Conv_Confidential-Regular',Sans-Serif;
   text-transform: uppercase;
   color: #fff;
-  font-size: 5em;
+  font-size: 5.5em;
   text-align: center;
-  letter-spacing: -5px;
-  padding-right: 20px;
   margin-top: 20px;
 }
 
 #home .hero .large{
 	font-weight: bold;
-	font-size: 40px;
+	font-size: 44px;
 	color: #074E6F;
 	text-transform: uppercase;
 	margin: 85px 0 0 136px;
@@ -110,7 +108,7 @@ html.refer, html.refer body{
 #home .hero .small{
 	font-weight: bold;
 	color: #955F5D;
-	font-size: 18px;
+	font-size: 20px;
 	margin: 10px 0 0 115px;
 	line-height: 30px;
 	position: relative;
@@ -123,7 +121,7 @@ html.refer, html.refer body{
 
 #home .form-wrap{
 	height: 100%;
-	width: 411px;
+	max-width: 411px;
 	margin: 23px auto 0;
 }
 
@@ -135,7 +133,7 @@ html.refer, html.refer body{
 }
 
 #home .form-wrap .byline{
-	font-size: 15px;
+	font-size: 16px;
 	text-transform: uppercase;
 	color: #ae0e5f;
 	text-align: center;
@@ -145,12 +143,22 @@ html.refer, html.refer body{
 	line-height: 20px;
 }
 
+#home .form-wrap .form-email{
+	overflow: hidden;
+	text-align: center;
+}
+
+#home .form-wrap .form-email .form-input{
+	overflow: hidden;
+  display: inline-block;
+}
+
 #home .form-wrap .email{
 	float: left;
-	font-size: 13px;
+	font-size: 14px;
 	padding: 10px 0 8px 10px;
 	border: 1px solid #ae0e5f;
-	width: 256px;
+	max-width: 256px;
 	outline: none;
 	letter-spacing: 1px;
 }
@@ -159,10 +167,10 @@ html.refer, html.refer body{
 	width: 143px;
   background: #ae0e5f;
   float: left;
-  height: 33px;
+  height: 34px;
   line-height: 33px;
   color: #FFF;
-  font-size: 13px;
+  font-size: 14px;
   text-transform: uppercase;
   border: 0;
   letter-spacing: 2px;
@@ -178,7 +186,7 @@ html.refer, html.refer body{
 	font-weight: 500;
 	color: #074e6f;
 	text-align: center;
-	font-size: 22px;
+	font-size: 24px;
 	letter-spacing: 1px;
 	line-height: 36px;
 	margin-bottom: 14px;
@@ -187,7 +195,7 @@ html.refer, html.refer body{
 #home .form-wrap.ended .compiling{
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-size: 14px;
+	font-size: 15.5px;
 	line-height: 30px;
 	color: #555556;
 	text-align: center;
@@ -197,7 +205,7 @@ html.refer, html.refer body{
 
 #home .form-wrap.ended .go-to{
 	font-style: italic;
-	font-size: 16px;
+	font-size: 17.5px;
 	letter-spacing: 1px;
 	text-align: center;
 	margin-bottom: 25px;
@@ -205,7 +213,7 @@ html.refer, html.refer body{
 
 #home .form-wrap.ended .go-to a{
 	color: #074e6f;
-	font-size: 19px;
+	font-size: 21px;
 	font-weight:bold;
 	text-transform: uppercase;
 	font-style: normal;
@@ -220,7 +228,7 @@ html.refer, html.refer body{
 	font-weight: 500;
 	color: #555556;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 15.5px;
 	text-align: center;
 }
 
@@ -234,7 +242,7 @@ html.refer, html.refer body{
 	font-weight: 500;
 	color: #074e6f;
 	text-align: center;
-	font-size: 22px;
+	font-size: 24px;
 	letter-spacing: 1px;
 	line-height: 36px;
 	margin-bottom: 14px;
@@ -243,7 +251,7 @@ html.refer, html.refer body{
 #home .form-wrap.ended .compiling{
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-size: 14px;
+	font-size: 15.5px;
 	line-height: 30px;
 	color: #555556;
 	text-align: center;
@@ -253,7 +261,7 @@ html.refer, html.refer body{
 
 #home .form-wrap.ended .go-to{
 	font-style: italic;
-	font-size: 16px;
+	font-size: 17.5px;
 	letter-spacing: 1px;
 	text-align: center;
 	margin-bottom: 25px;
@@ -261,7 +269,7 @@ html.refer, html.refer body{
 
 #home .form-wrap.ended .go-to a{
 	color: #074e6f;
-	font-size: 19px;
+	font-size: 21px;
 	font-weight:bold;
 	text-transform: uppercase;
 	font-style: normal;
@@ -276,7 +284,7 @@ html.refer, html.refer body{
 	font-weight: 500;
 	color: #555556;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 15.5px;
 	text-align: center;
 }
 
@@ -293,7 +301,7 @@ html.refer, html.refer body{
 }
 
 #refer .page-content{
-	width: 1120px;
+	max-width: 1120px;
 	margin: 0 auto;
 	z-index: 0;
 	position: relative;
@@ -322,11 +330,11 @@ html.refer, html.refer body{
 }
 
 #refer .header .byline{
-	font-size: 14px;
+	font-size: 15.5px;
 }
 
 #refer .header .logo{
-	font-size: 25px;
+	font-size: 27px;
 	color: #000;
 	text-align: center;
 	font-family:'Conv_Confidential-Regular';
@@ -335,7 +343,7 @@ html.refer, html.refer body{
 
 #refer .hero{
 	background: #ae0e5f;
-	height: 390px;
+	height: 387px;
 	overflow: hidden;
 }
 
@@ -361,7 +369,7 @@ html.refer, html.refer body{
 
 #refer .mammoth .need{
 	color: #FFF;
-	font-size: 38px;
+	font-size: 42px;
 	text-transform: uppercase;
 	font-weight: bold;
 	margin: 102px 0 0 72px;
@@ -383,7 +391,7 @@ html.refer, html.refer body{
 
 
 #refer .share-wrap .why{
-	font-size: 16px;
+	font-size: 17.5px;
 	font-family: 'Conv_Confidential-Regular',Sans-Serif;
 	color: #fff;
 	font-weight: bold;
@@ -391,7 +399,7 @@ html.refer, html.refer body{
 }
 
 #refer .share-wrap .title{
-	font-size: 30px;
+	font-size: 33px;
 	line-height: 40px;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -404,7 +412,7 @@ html.refer, html.refer body{
 #refer .share-wrap .subtitle{
 	font-family: 'Conv_Confidential-Regular',Sans-Serif;
 	color: #fff;
-	font-size: 18px;
+	font-size: 20px;
 	text-transform: none;
 	margin-top: 15px;
 	line-height: 1.5em;
@@ -415,9 +423,19 @@ html.refer, html.refer body{
 	background: #FFF;
 	padding: 10px 0;
 	text-transform: none;
-	font-size: 11px;
 	margin: 20px auto 0;
-	font-size: 16px;
+	font-size: 17px;
+}
+
+#refer .share-wrap .copy-link .link-copy{
+	position: relative;
+	padding-right: 15px;
+}
+
+#refer .share-wrap .copy-link .link-copy .copy-img{
+	position: absolute;
+	height: 20px;
+	width: 20px;
 }
 
 #refer .share-wrap .social-links{
@@ -454,6 +472,7 @@ html.refer, html.refer body{
 	margin: 0 20px;
 }
 
+
 #refer .prizes{
 	width: 100%;
 	background: url(/assets/refer/bg.jpg);
@@ -467,7 +486,7 @@ html.refer, html.refer body{
 
 #refer .prizes .callout{
 	text-align: center;
-	font-size: 16px;
+	font-size: 17.5px;
 	font-family: 'Constantia',"Lucida Bright","DejaVu Serif",Georgia,serif;
 	color: #000;
 	font-weight: bold;
@@ -520,7 +539,7 @@ html.refer, html.refer body{
 	font-family: 'Constantia',"Lucida Bright","DejaVu Serif",Georgia,serif;
 	color: #000;
 	font-weight: 500;
-	font-size: 14px;
+	font-size: 15.5px;
 	float: left;
 	margin-right: 68px;
 	width: 165px;
@@ -545,6 +564,7 @@ html.refer, html.refer body{
 	margin-right: 129px;
 	float: left;
 	position: relative;
+	font-size: 17px;
 }
 
 #refer .prizes .products li.product .circle{
@@ -639,7 +659,7 @@ html.refer, html.refer body{
 
 #refer .prizes p.place{
 	text-align: center;
-	font-size: 16px;
+	font-size: 17.5px;
 	font-family: 'Constantia',"Lucida Bright","DejaVu Serif",Georgia,serif;
 	color: #000;
 	width: 100%;
@@ -653,7 +673,7 @@ html.refer, html.refer body{
 
 #refer .prizes p.check{
 	text-align: center;
-	font-size: 16px;
+	font-size: 17.5px;
 	font-family: 'Constantia',"Lucida Bright","DejaVu Serif",Georgia,serif;
 	color: #000;
 	width: 100%;
@@ -663,7 +683,7 @@ html.refer, html.refer body{
 
 #refer .prizes p.ship{
 	text-align: center;
-	font-size: 16px;
+	font-size: 17.5px;
 	font-family: 'Constantia',"Lucida Bright","DejaVu Serif",Georgia,serif;
 	color: #000;
 	width: 100%;
@@ -673,7 +693,7 @@ html.refer, html.refer body{
 
 #refer .prizes a.policy{
 	text-align: center;
-	font-size: 12px;
+	font-size: 13px;
 	font-family: 'Constantia',"Lucida Bright","DejaVu Serif",Georgia,serif;
 	color: #000;
 	width: 100%;
@@ -694,6 +714,10 @@ only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
 	#home .hero{
 		background-size: 1600px 446px;
+	}
+
+	#home .hero .img-text{
+		font-size: 3em;
 	}
 
 	#home .form-wrap .key{

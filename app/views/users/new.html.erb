@@ -13,20 +13,22 @@
   <div class="img-text">
     EAT MY PUCCIA
   </div>
-
 </div>
 <div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
   <% if Rails.application.config.ended %>
-  <p class="thanks brandon">THANK YOU FOR PARTICIPATING<br>IN OUR PRE-LAUNCH.</p>
-  <p class="compiling brandon">WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL<br/>COUPON CODES TO ALL RECIPIENTS IN THE NEXT DAY OR TWO</p>
-  <p class="go-to brandon">In the meantime, head to  <a href="http://www.luckyspuccias.com.com/">WWW.LuckysPuccias.COM</a></p>
-  <p class="again brandon">Thank You Again!</p>
-  <% else %>
-  <div class="key"></div>
-  <p class="byline brandon">Join our newsletter, share your special link, earn rewards</p>
-  <%= form_for @user, :url => { :action => "create" } do |f| %>
-  <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>
-  <input class="submit brandon" name="commit" type="submit" value="Italia!" />
-  <% end %>
+    <p class="thanks brandon">THANK YOU FOR PARTICIPATING<br>IN OUR PRE-LAUNCH.</p>
+    <p class="compiling brandon">WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL<br/>COUPON CODES TO ALL RECIPIENTS IN THE NEXT DAY OR TWO</p>
+    <p class="go-to brandon">In the meantime, head to  <a href="http://www.luckyspuccias.com.com/">WWW.LuckysPuccias.COM</a></p>
+    <p class="again brandon">Thank You Again!</p>
+    <% else %>
+    <div class="key"></div>
+    <p class="byline brandon">Join our newsletter, share your special link, earn rewards</p>
+    <%= form_for @user, :url => { :action => "create" },html: {class: "form-email"} do |f| %>
+      <div class="form-input">
+        <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>
+        <input class="submit brandon" name="commit" type="submit" value="Italia!" />
+      </div>
+      <div class="clearfix"></div>
+    <% end %>
   <% end %>
 </div>

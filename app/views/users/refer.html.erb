@@ -1,6 +1,6 @@
 <div class="header">
   <div class="content">
-    <p class="logo brandon">Lucky's Puccia</p>
+    <p class="logo brandon">Lucky's Puccias</p>
   </div>
 </div>
 <div class="hero">
@@ -12,8 +12,14 @@
       <p class="why brandon">Bring your friends to italy with you</p>
       <p class="title brandon">INVITE FRIENDS &<br>Earn Puccia</p>
       <p class="subtitle brandon">Share your unique link via email, Facebook or Twitter and earn<br> Lucky's Puccias goods for each friend who signs up.</p>
-      <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
-      <% twitter_message = "Welcome to Luckys, Where we bring you Austin’s only authentic wood fired Italian sandwiches known as the puccia (POO*CHAH)." %>
+        <div class="copy-link brandon">
+          <%= root_url %>?ref=<%= @user.referral_code %>
+          <input type="hidden" id="link-copy-clipboard"  value="<%= root_url %>?ref=<%= @user.referral_code %>">
+          <a class="link-copy" href="javascript:void(0)" onclick="copyToClipBoard()">
+            <%= image_tag("refer/c.jpg", class: "copy-img") %>
+            </a>
+        </div>
+        <% twitter_message = "Welcome to Luckys, Where we bring you Austin’s only authentic wood fired Italian sandwiches known as the puccia (POO*CHAH)." %>
       <div class="social-links">
         <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Lucky's Puccias" class="fb" target="_blank"></a>
         <div class="sep"></div>
