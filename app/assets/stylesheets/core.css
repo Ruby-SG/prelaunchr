@@ -321,8 +321,7 @@ html.refer, html.refer body{
 	margin: 0 auto;
 }
 
-#refer .header p{
-	float: left;
+#refer .header .brandon{
 	color: #FFF;
 	font-weight: 500;
 	text-transform: uppercase;
@@ -351,6 +350,7 @@ html.refer, html.refer body{
 	position: absolute;
 	top: 50px;
 	left: 100px;
+	width: 45%;
 }
 
 #refer .hero .img-logo img{
@@ -382,7 +382,7 @@ html.refer, html.refer body{
 
 #refer .share-wrap{
 	float: right;
-	width: 400px;
+	width: 35%;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: .13em;
@@ -527,7 +527,6 @@ html.refer, html.refer body{
 
 #refer .prizes ul.products{
 	height: 105px;
-	width: 100%;
 	margin-top: 30px;
 	position: relative;
 	z-index: 1;
@@ -552,7 +551,7 @@ html.refer, html.refer body{
 }
 
 #refer .prizes .products li.title .rewards{
-	margin-top: 45px;
+	margin-top: 20px;
 	letter-spacing: 2px;
 }
 
@@ -703,7 +702,184 @@ html.refer, html.refer body{
 	text-decoration: none;
 }
 
+#refer .prizes .products-desktop {
+	display: block;
+}
 
+#refer .prizes .products-mobile {
+	display: none;
+}
+
+@media screen and (max-width: 1200px) {
+	#refer .prizes .products{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	#refer .prizes .products li.title{
+		margin-right: 40px;
+	}
+	#refer .prizes .products li.product{
+	width: 125px;
+	margin-right: 80px;
+	position: relative;
+	font-size: 15px;
+	}
+
+}
+
+@media screen and (max-width: 992px) {
+	#refer .hero .img-logo img{
+	width: 220px;
+	height: 220px;
+	}
+	#refer .share-wrap .why {
+    font-size: 16px;
+    margin-top: 22px;
+	}
+	#refer .share-wrap .title {
+    font-size: 25px;
+    margin-top: 15px;
+    letter-spacing: .1em;
+  }
+  #refer .share-wrap .subtitle {
+    font-size: 15px;
+    margin-top: 10px;
+    line-height: 1.5em;
+	}
+	#refer .share-wrap .copy-link {
+    padding: 10px 0;
+    margin: 15px auto 0;
+    font-size: 13px;
+	}
+	#refer .prizes .products li.title{
+		margin-right: 0;
+	}
+	#refer .prizes .products li.title{
+		font-size: 15px;
+	}
+	#refer .prizes .products li.title .rewards{
+	margin-top: 30px;
+	letter-spacing: 2px;
+	}
+	#refer .prizes .products li.product{
+	margin-right: 10px;
+	}
+
+}
+@media screen and (max-width: 768px) {
+	#refer .hero .img-logo {
+		position: relative;
+		text-align: center;
+		width: 100%;
+		top: 30px;
+		left: 0px;
+	}
+	#refer .hero .img-logo img {
+		width: 120px;
+		height: 120px;
+	}
+	#refer .share-wrap {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .13em;
+    float: none;
+   }
+   #refer .share-wrap .why {
+    font-size: 15px;
+    margin-top: 40px;
+	}
+	#refer .share-wrap .title {
+    font-size: 20px;
+    margin-top: 10px;
+    letter-spacing: .1em;
+  }
+  #refer .share-wrap .subtitle {
+    font-size: 13px;
+    margin-top: 10px;
+    line-height: 1.5em;
+	}
+	#refer .share-wrap .copy-link {
+    padding: 10px 0;
+    margin: 15px auto 0;
+    font-size: 12px;
+    width: 50%;
+	}
+
+	#refer .prizes .products-desktop {
+		display: none;
+	}
+
+	#refer .prizes .products-mobile {
+		display: block;
+		padding-top: 20px;
+	}
+
+	#refer .prizes .progress {
+		display: none;
+	}
+
+	#refer .prizes .rows {
+		position: relative;
+		overflow: hidden;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-size: 14px;
+	}
+
+	#refer .prizes .rows .left-part {
+		float: left;
+		width: 50%;
+		font-family: 'Constantia',"Lucida Bright","DejaVu Serif",Georgia,serif;
+		text-align: center;
+	}
+
+	#refer .prizes .rows .right-part {
+		float: right;
+		width: 50%;
+		font-family: 'Constantia',"Lucida Bright","DejaVu Serif",Georgia,serif;
+		text-align: center;
+	}
+	#refer .prizes .rows .right-part p {
+		font-size: 14px;
+		margin-top: 4%;
+	}
+	#refer .prizes .rows .circle {
+		text-align: center;
+	}
+	#refer .prizes .rows .circle p {
+		height: 30px;
+		width: 30px;
+		border-radius: 15px;
+		border: 1px solid #DAD9D2;
+		text-align: center;
+		line-height: 33px;
+		color: #868282;
+		overflow: hidden;
+		background: #F1F0EE;
+		font-weight: bold;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#refer .page-content {
+		font-size: 14px;
+	}
+
+	 #refer .share-wrap .subtitle {
+    font-size: 12px;
+    margin-top: 10px;
+    line-height: 1.3em;
+	}
+
+	#refer .share-wrap .copy-link {
+    padding: 10px 0;
+    margin: 5px auto 0;
+    font-size: 11px;
+    width: 50%;
+	}
+}
 
 /*
 	RETINA
@@ -766,6 +942,7 @@ only screen and (min-device-pixel-ratio: 2) {
 		background: url(/assets/refer/caret-selected@2x.png) center center no-repeat;
 		background-size: 16px 10px;
 	}
+
 }
 
 #video-viewport {

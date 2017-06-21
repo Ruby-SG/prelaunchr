@@ -1,6 +1,6 @@
 <div class="header">
   <div class="content">
-    <p class="logo brandon">Lucky's Puccias</p>
+    <div class="logo brandon">Lucky's Puccias</div>
   </div>
 </div>
 <div class="hero">
@@ -10,10 +10,10 @@
     </div>
     <div class="share-wrap">
       <p class="why brandon">Bring your friends to italy with you</p>
-      <p class="title brandon">INVITE FRIENDS &<br>Earn Puccia</p>
+      <p class="title brandon">INVITE FRIENDS & Earn Puccia</p>
       <p class="subtitle brandon">Share your unique link via email, Facebook or Twitter and earn<br> Lucky's Puccias goods for each friend who signs up.</p>
         <div class="copy-link brandon">
-          <%= root_url %>?ref=<%= @user.referral_code %>
+         <%= root_url %>?ref=<%= truncate(@user.referral_code, :length => 10, :seperator => '...') %>
           <input type="hidden" id="link-copy-clipboard"  value="<%= root_url %>?ref=<%= @user.referral_code %>">
           <a class="link-copy" href="javascript:void(0)" onclick="copyToClipBoard()">
             <%= image_tag("refer/c.jpg", class: "copy-img") %>
@@ -44,22 +44,36 @@
 <div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
   <div class="page-content">
     <p class="callout brandon">Here's How It Works:</p>
-    <ul class="products clearfix">
+    <ul class="products clearfix products-desktop">
       <li class="title brandon">
         <p class="friends">Friends Joined</p>
         <p class="rewards">Lucky's Puccias</p>
       </li>
+
       <% stops.each do |stop| %>
-      <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
-        <div class="circle"><%= stop["count"] %></div>
-        <div class="sep"></div>
-        <p><%= stop["html"].html_safe %></p>
-<!--         <div class="tooltip">
-          <img src="<%= stop["image"] %>" height="254">
-        </div> -->
-      </li>
+        <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
+          <div class="circle"><%= stop["count"] %></div>
+          <div class="sep"></div>
+          <p><%= stop["html"].html_safe %></p>
+  <!--         <div class="tooltip">
+            <img src="<%= stop["image"] %>" height="254">
+          </div> -->
+        </li>
       <% end %>
     </ul>
+
+    <div class="products-mobile">
+      <div class="rows">
+        <div class="left-part"><span>FRIENDS JOINEDS</span></div>
+        <div class="right-part"><span>LUCKY'S PUCCIAS</span></div>
+      </div>
+      <% stops.each do |stop| %>
+        <div class="rows">
+          <div class="left-part circle"><p><%= stop["count"] %></p></div>
+          <div class="right-part" ><p><%= stop["html"].html_safe %></p></div>
+        </div>
+      <% end %>
+    </div>
     <div class="progress">
       <div class="mover">
         <div class="bar clearfix"></div>
