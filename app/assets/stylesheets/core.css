@@ -167,7 +167,7 @@ html.refer, html.refer body{
 	width: 143px;
   background: #ae0e5f;
   float: left;
-  height: 34px;
+  height: 36px;
   line-height: 33px;
   color: #FFF;
   font-size: 14px;
@@ -551,7 +551,7 @@ html.refer, html.refer body{
 }
 
 #refer .prizes .products li.title .rewards{
-	margin-top: 20px;
+	margin-top: 45px;
 	letter-spacing: 2px;
 }
 
@@ -767,6 +767,20 @@ html.refer, html.refer body{
 
 }
 @media screen and (max-width: 768px) {
+	#home .form-wrap .email {
+		width: 100%;
+		float: none;
+		margin: 0 auto;
+	}
+
+	#home .form-wrap .submit {
+		float: none;
+		margin: 0 auto;
+		margin-top: 5px;
+	}
+	#refer .hero {
+		padding-bottom: 20px;
+	}
 	#refer .hero .img-logo {
 		position: relative;
 		text-align: center;
@@ -835,10 +849,9 @@ html.refer, html.refer body{
 	}
 
 	#refer .prizes .rows .right-part {
-		float: right;
+		float: left;
 		width: 50%;
 		font-family: 'Constantia',"Lucida Bright","DejaVu Serif",Georgia,serif;
-		text-align: center;
 	}
 	#refer .prizes .rows .right-part p {
 		font-size: 14px;
@@ -863,6 +876,18 @@ html.refer, html.refer body{
 }
 
 @media screen and (max-width: 480px) {
+	#home .form-wrap .email {
+		width: 100%;
+		float: none;
+		margin: 0 auto;
+	}
+
+	#home .form-wrap .submit {
+		float: none;
+		margin: 0 auto;
+		margin-top: 5px;
+	}
+
 	#refer .page-content {
 		font-size: 14px;
 	}
@@ -875,9 +900,21 @@ html.refer, html.refer body{
 
 	#refer .share-wrap .copy-link {
     padding: 10px 0;
-    margin: 5px auto 0;
     font-size: 11px;
-    width: 50%;
+    width: 96%;
+	}
+}
+@media screen and (max-width: 320px) {
+	#home .form-wrap .email {
+		width: 100%;
+		float: none;
+		margin: 0 auto;
+	}
+
+	#home .form-wrap .submit {
+		float: none;
+		margin: 0 auto;
+		margin-top: 5px;
 	}
 }
 
