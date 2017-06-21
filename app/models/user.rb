@@ -13,25 +13,25 @@ class User < ActiveRecord::Base
 	REFERRAL_STEPS = [
 		{
 			'count' => 3,
-			"html" => "Free desert",
+			"html" => "Free Mort Subite Glass",
 			"class" => "two",
 			"image" =>  ActionController::Base.helpers.asset_path("refer/cream-tooltip@2x.png")
 		},
 		{
 			'count' => 6,
-			"html" => "Free mini Puccia",
+			"html" => "Free Mort Subite Glass & a beer!",
 			"class" => "three",
 			"image" => ActionController::Base.helpers.asset_path("refer/truman@2x.png")
 		},
 		{
 			'count' => 9,
-			"html" => "Free pizza & Desert",
+			"html" => "Two Mort Subite Glasses, both filled with love at pickup",
 			"class" => "four",
 			"image" => ActionController::Base.helpers.asset_path("refer/winston@2x.png")
 		},
 		{
 			'count' => 12,
-			"html" => "$25 gift card!",
+			"html" => "$35 gift card!",
 			"class" => "five",
 			"image" => ActionController::Base.helpers.asset_path("refer/blade-explain@2x.png")
 		}
