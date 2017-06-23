@@ -58,7 +58,22 @@ form{
     clear: both;
 }
 
+.alert-success{
+ 	text-align: center;
+ 	width: 100%;
+ 	height: 50px;
+ 	background:#dff0d8;
+ 	color: #3c763d;
+ 	margin: 0 auto;
+ }
 
+ .hide {
+ 	display: none;
+ }
+
+.alert-success p {
+ 	padding-top: 15px;
+}
 /* Home */
 
 html.home{
@@ -81,8 +96,8 @@ html.refer, html.refer body{
 
 #home .hero{
  	width: 100%;
- 	height: 400px;
- 	background: url(/assets/home/cropped-beer.jpg);
+ 	height: 380px;
+ 	background: #e5a87c;
  	overflow: hidden;
  	position: relative;
  	background-size:cover;
@@ -92,15 +107,15 @@ html.refer, html.refer body{
  }
 
 #home .hero .img-logo{
-  position: absolute;
-  top: 80px;
-  left: 150px;
-  width: 45%;
+ 	  margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 30px;
 }
 
 #home .hero .img-logo img{
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 300px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -364,20 +379,20 @@ html.refer, html.refer body{
 }
 
 #refer .hero{
-	background: url(/assets/home/cropped-beer.jpg);
-	height: 391px;
+	background: #e5a87c;
+	height: 360px;
 	background-size:cover;
 	background-position:center;
 }
 
 #refer .hero .img-logo{
 	position: absolute;
-	top: 50px;
+	top: 40px;
 	left: 100px;
 }
 
 #refer .hero .img-logo img{
-	width: 250px;
+	width: 300px;
 	height: 250px;
 }
 
@@ -418,7 +433,7 @@ html.refer, html.refer body{
 	font-family: 'im_fell_dw_pica_proitalic';
 	color: #000;
 	font-weight: bold;
-	margin-top: 70px;
+	margin-top: 20px;
 }
 
 #refer .share-wrap .title{
@@ -750,9 +765,16 @@ html.refer, html.refer body{
 }
 
 @media screen and (max-width: 992px) {
-	#refer .hero .img-logo img{
-	width: 220px;
-	height: 220px;
+	#refer .hero{
+	background: #e5a87c;
+	height: 390px;
+	background-size:cover;
+	background-position:center;
+}
+	#refer .hero .img-logo{
+		position: absolute;
+    top: 40px;
+    left: 80px;
 	}
 
 	#refer .share-wrap {
@@ -802,18 +824,19 @@ html.refer, html.refer body{
 		margin-top: 5px;
 	}
 	#refer .hero {
-		padding-bottom: 20px;
+		padding-bottom: 30px;
 	}
 	#refer .hero .img-logo {
 		position: relative;
 		text-align: center;
 		width: 100%;
-		top: 30px;
+		top: 20px;
 		left: 0px;
 	}
 	#refer .hero .img-logo img {
-		width: 120px;
-		height: 120px;
+		width: 200px;
+    height: 140px;
+
 	}
 	#refer .share-wrap {
     width: 100%;
@@ -903,12 +926,10 @@ html.refer, html.refer body{
 	}
 }
 @media screen and (max-width: 600px){
-	#home .hero .img-logo {
-		position: absolute;
-		text-align: center;
-		top: 80px;
-		width: 100%;
-		left: 0;
+	#refer .hero .img-logo img {
+		width: 200px;
+    height: 120px;
+
 	}
 
 	#refer .share-wrap .title {
@@ -958,6 +979,10 @@ html.refer, html.refer body{
 	}
 }
 @media screen and (max-width: 320px) {
+	#home .hero .img-logo img {
+		width: 300px;
+		height: 280px;
+	}
 	#home .form-wrap .email {
 		width: 100%;
 		float: none;
