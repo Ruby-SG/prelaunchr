@@ -16,7 +16,7 @@
          <%= root_url %>?ref=<%= truncate(@user.referral_code, :length => 10, :seperator => '...') %>
           <input type="hidden" id="link-copy-clipboard"  value="<%= root_url %>?ref=<%= @user.referral_code %>">
           <a class="link-copy" href="javascript:void(0)" onclick="copyToClipBoard()">
-              <%= image_tag("refer/c.jpg",class: "copy-img", :onclick => 'alert("Copy successful!")'  ) %>
+              <%= image_tag("refer/c.jpg",class: "copy-img", :onclick => 'alert("Copied successfully!")'  ) %>
           </a>
          </div>
           <% twitter_message = "Welcome to Luckys, Where we bring you Austin’s only authentic wood fired Italian sandwiches known as the puccia (POO*CHAH)." %>
