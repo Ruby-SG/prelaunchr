@@ -21,10 +21,11 @@ $(document).ready(function(){
 	  copied = document.execCommand("copy");
 	  document.body.removeChild(aux);
 	  if (copied) {
+	  	console.log("xxx")
 	    $('.copied-message').removeClass('hide');
 	    return setTimeout((function() {
 	      return $('.copied-message').addClass('hide');
-	    }), 1500);
+	    }), 2000);
 	  }
 	};
 

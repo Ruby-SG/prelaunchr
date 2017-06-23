@@ -1,3 +1,6 @@
+<div class="alert alert-success copied-message hide">
+      <p>Coppied successful!</p>
+</div>
 <div class="header">
   <div class="content">
     <div class="logo brandon">Lucky's Puccias</div>
@@ -16,7 +19,7 @@
          <%= root_url %>?ref=<%= truncate(@user.referral_code, :length => 10, :seperator => '...') %>
           <input type="hidden" id="link-copy-clipboard"  value="<%= root_url %>?ref=<%= @user.referral_code %>">
           <a class="link-copy" href="javascript:void(0)" onclick="copyToClipBoard()">
-              <%= image_tag("refer/c.jpg", class: "copy-img") %>
+              <%= image_tag("refer/c.jpg",class: "copy-img"  ) %>
           </a>
          </div>
           <% twitter_message = "Welcome to Luckys, Where we bring you Austin’s only authentic wood fired Italian sandwiches known as the puccia (POO*CHAH)." %>
