@@ -13,19 +13,19 @@ class User < ActiveRecord::Base
 	REFERRAL_STEPS = [
 		{
 			'count' => 3,
-			"html" => "Free Mort Subite Glass",
+			"html" => "Free Mort Subite glass",
 			"class" => "two",
 			"image" =>  ActionController::Base.helpers.asset_path("refer/cream-tooltip@2x.png")
 		},
 		{
 			'count' => 6,
-			"html" => "Free Mort Subite Glass & a beer!",
+			"html" => "Free Mort Subite glass filed with love ",
 			"class" => "three",
 			"image" => ActionController::Base.helpers.asset_path("refer/truman@2x.png")
 		},
 		{
 			'count' => 9,
-			"html" => "Two Mort Subite Glasses, both filled with love at pickup",
+			"html" => "Two Mort Subite glasses, both filled with love at pickup",
 			"class" => "four",
 			"image" => ActionController::Base.helpers.asset_path("refer/winston@2x.png")
 		},
