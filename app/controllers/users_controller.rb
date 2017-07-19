@@ -75,10 +75,10 @@ class UsersController < ApplicationController
 		@is_mobile = mobile_device?
 
 		@user = User.find_by_email(email)
-
 		respond_to do |format|
 			if !@user.nil?
 				format.html #refer.html.erb
+				UserMailer.signup_email(@user).deliver
 			else
 				format.html { redirect_to root_path, :alert => "Something went wrong!" }
 			end
